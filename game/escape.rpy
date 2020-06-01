@@ -133,10 +133,10 @@ label escapewin:
         "Sc 15.2.1, bad brother grateful."
         "Sc 15.2.3, reveal exit"
 
-    jump revelation
+    jump revelation # AIcar.rpy
 
 
 label escapelose:
     if takeGoodBrotherAI:
-        jump gameover2
-    jump gameover3
+        jump gameover2 # gameovers.rpy
+    jump gameover3 # gameovers.rpy

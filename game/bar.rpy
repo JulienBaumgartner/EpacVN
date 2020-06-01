@@ -10,7 +10,7 @@ label enterBar:
         jump goodBrotherActions
     else:
         "Nothing to do here"
-        jump explorationMap
+        jump explorationMap #explorationMap.rpy
 
 #Sc 08.2
 label firstBar:
@@ -45,8 +45,8 @@ label discussGoodBrother:
                 jump explorationMap
             "Take AI":
                 jump takeAIGoodBrother
-    jump explorationMap
+    jump explorationMap #explorationMap.rpy
 
 #Sc 11
 label takeAIGoodBrother:
-    jump initStealAIGoodBrother
+    jump initStealAIGoodBrother #stealAIGoodBrother.rpy

@@ -6,11 +6,8 @@ label explorationMap:
     menu:
         "Exploration choices"
 
-        "Kitchen car" if firstEnterKitchen or AIDoorReveal:
-            jump enterKitchen
-
         "Storage car" if not takeBadBrotherAI and not failBadBrotherSteal :
-            jump enterStorage
+            jump enterStorage #storage.rpy
 
         "Bar" if not takeGoodBrotherAI and not failGoodBrotherSteal:
-            jump enterBar
+            jump enterBar #bar.rpy

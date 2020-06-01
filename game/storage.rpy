@@ -11,7 +11,7 @@ label enterStorage:
         jump badBrotherActions
     else:
         "Nothing to do here"
-        jump explorationMap
+        jump explorationMap # explorationMap.rpy
 
 #Sc 08.2
 label firstStorage:
@@ -43,11 +43,11 @@ label discussBadBrother:
     if goodBrotherAskHelp:
         menu:
             "Explore":
-                jump explorationMap
+                jump explorationMap # explorationMap.rpy
             "Take AI":
                 jump takeAIBadBrother
-    jump explorationMap
+    jump explorationMap # explorationMap.rpy
 
 #Sc 12
 label takeAIBadBrother:
-    jump initStealAIBadBrother
+    jump initStealAIBadBrother # stealAIBadBrother.rpy

@@ -70,27 +70,4 @@ label initVariables:
     $ takeBadBrotherAI = False
     $ failBadBrotherSteal = False
 
-    jump brochure
-
-label test:
-
-    scene bg room
-
-    show derek normal at left
-    show kvin normal at center
-    show sharon normal at right
-
-    " "
-
-    hide derek normal
-    hide kvin normal
-    hide sharon normal
-
-    show lin normal at left
-    show neonila normal at center
-    show hans normal at right
-
-
-    " "
-
-    return
+    jump brochure #part1.rpy

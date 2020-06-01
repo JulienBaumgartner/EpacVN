@@ -199,9 +199,9 @@ label losestoragegame:
     lastResearch[0] "I ..."
     stwin "Get out of here!"
 
-    jump gameover4
+    jump gameover4 # gameovers.rpy
 
 label finishstoragegame:
 
     "You have the key"
-    jump openAiDoor
+    jump openAiDoor # kitchen.rpy

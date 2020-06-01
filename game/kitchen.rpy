@@ -16,7 +16,7 @@ label enterKitchen:
 
     else:
         "Nothing to do here"
-        jump explorationMap
+        jump explorationMap #explorationMap.rpy
 
 #Sc 09
 label kitchencar:
@@ -25,15 +25,17 @@ label kitchencar:
     "Sc 09, kitchen car"
     "Old tourist group dead"
     "locked inside"
-    jump startpasswordgame
+    jump startpasswordgame #mastermind.rpy
 
 #Sc 13
 label goodBrotherRevealDoor:
+    scene bg ai_door
     "Sc 13, The good brother reveal the door in the kitchen"
     jump inspectAiDoor
 
 #Sc 13
 label badBrotherRevealDoor:
+    scene bg ai_door
     "Sc 13, The bad brother reveal the door in the kitchen"
     jump inspectAiDoor
 
@@ -49,9 +51,9 @@ label inspectAiDoor:
 label searchAiDoorKey:
     "Sc 13.4, you don't have the key."
     "The key is in the parade car."
-    jump startstoragegame
+    jump startstoragegame # storagegame.rpy
 
 #Sc 13.5
 label openAiDoor:
     "Sc 13.5, the door is open"
-    jump enterAIroom
+    jump enterAIroom #AIcar.rpy

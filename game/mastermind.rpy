@@ -131,11 +131,10 @@ label passwordGameWin:
     hide screen passwordTuto
     "Success, you leave the kitchen car."
     $ escapeKitchenCar = True
-    jump explorationMap
+    jump explorationMap # explorationMap.rpy
 
 label passwordGameLose:
     hide screen passwordGame
     hide screen passwordTuto
 
-    "Bad end 1"
-    return
+    jump gameover1 #gameovers.rpy

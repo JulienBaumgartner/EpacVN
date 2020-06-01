@@ -66,4 +66,4 @@ label crazybot:
 
     "Sc 07, Carnabots crazy, dog death"
 
-    jump explorationMap
+    jump enterKitchen #kitchen.rpy

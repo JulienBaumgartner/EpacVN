@@ -378,7 +378,7 @@ label distractRobotGoodBrother:
         show thiefChr at right with move
         thiefName "I have the chip!"
         $ takeGoodBrotherAI = True
-        jump badBrotherRevealDoor
+        jump badBrotherRevealDoor # kitchen.rpy
     else:
         show distractChr at outLeft
         show thiefChr at right
@@ -389,5 +389,5 @@ label distractRobotGoodBrother:
         stwin "Get out of here!"
         $ failGoodBrotherSteal = True
         if failBadBrotherSteal:
-            jump gameover1
-    jump explorationMap
+            jump gameover1 # gameovers.rpy
+    jump explorationMap # explorationMap.rpy
