@@ -1,6 +1,6 @@
 # Sc 01 - 07
 # Before exploration
-
+#test
 #Sc 01
 label brochure:
     scene bg brochure
