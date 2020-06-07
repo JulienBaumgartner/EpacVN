@@ -128,8 +128,10 @@ label escapewin:
     hide stwin with moveoutright
 
     if takeGoodBrotherAI:
+        scene bg_ai_room_end
         "Sc 15.1.3, force exit"
     else:
+        scene bg_exit_door_opened
         "Sc 15.2.1, bad brother grateful."
         "Sc 15.2.3, reveal exit"
 
