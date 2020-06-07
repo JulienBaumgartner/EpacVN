@@ -49,17 +49,16 @@ label parade:
 
 #Sc 05
 label bar:
+    scene bg_bar:
+        zoom 0.5
 
-    "Sc 05, bar"
+    "Sc 05, bar test"
 
     jump bug
 
 #Sc 06
 label bug:
-
-    "Sc 06, bug, reboot"
-
-    jump crazybot
+    scene bg parade_car
 
 #Sc 07
 label crazybot:

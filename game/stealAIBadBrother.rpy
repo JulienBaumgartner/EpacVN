@@ -15,7 +15,9 @@ image distractChr = "[distractPath]"
 image thiefChr = "[thiefPath]"
 
 label stealAIBadBrother:
-    scene bg storage
+    scene bg_storage:
+        zoom 0.5
+
     show derek normal at right with moveinright
     derek "So, how are we going to take this AI?"
 
@@ -189,7 +191,7 @@ label startStealGameBadBrother:
 
     $ thiefX = 1.4
 
-    scene bg storage
+    scene bg_storage
     show stwin normal at topcenter zorder 10
     show thiefChr:
         xalign thiefX

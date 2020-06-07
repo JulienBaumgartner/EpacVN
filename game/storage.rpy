@@ -4,7 +4,8 @@
 
 # Enter from the map
 label enterStorage:
-    scene bg storage
+    scene bg_storage:
+        zoom 0.5
     if firstEnterStorage:
         jump firstStorage
     elif goodBrotherAskHelp or badBrotherAskHelp:

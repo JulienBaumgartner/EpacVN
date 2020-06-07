@@ -3,7 +3,8 @@
 
 # Enter from the map
 label enterBar:
-    scene bg parade_bar
+    scene bg_bar:
+        zoom 0.5
     if firstEnterBar:
         jump firstBar
     elif goodBrotherAskHelp or badBrotherAskHelp:

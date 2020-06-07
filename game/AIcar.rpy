@@ -19,7 +19,7 @@ label uploadBadBrother:
 
 
 label revelation:
-    scene bunker
+    scene bg_hangar_green
     "Sc 16, revelation bunker"
     "End"
     return
