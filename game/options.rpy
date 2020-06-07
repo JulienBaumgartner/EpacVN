@@ -4,7 +4,7 @@
 ## them. Lines beginning with a single '#' mark are commented-out code, and you
 ## may want to uncomment them when appropriate.
 
-define config.rollback_enabled = False
+define config.rollback_enabled = True
 
 ## Basics ######################################################################
 

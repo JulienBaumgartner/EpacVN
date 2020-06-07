@@ -42,7 +42,7 @@ transform outLeft:
     yalign 1.0
 
 transform outRight:
-    xalign -0.5
+    xalign 1.5
     yalign 1.0
 
 label start:
