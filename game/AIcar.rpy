@@ -1,8 +1,8 @@
-# Sc 15 - 16
+# Sc 15 
 # AI car scenes
 
 label enterAIroom:
-    scene bg ai_room
+    scene bg_AI_Room
     "Sc 15, discussion with the AI"
     if takeGoodBrotherAI:
         jump uploadGoodBrother
@@ -18,8 +18,8 @@ label uploadBadBrother:
     jump escapegame
 
 
-label revelation:
-    scene bg_hangar_green
-    "Sc 16, revelation bunker"
-    "End"
+# label revelation:
+    #scene bg_hangar_green
+    #"Sc 16, revelation bunker"
+    #"End"
     return

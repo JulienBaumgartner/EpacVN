@@ -133,7 +133,7 @@ label escapewin:
         "Sc 15.2.1, bad brother grateful."
         "Sc 15.2.3, reveal exit"
 
-    jump revelation # AIcar.rpy
+    jump revelation # bunker.rpy
 
 
 label escapelose:
