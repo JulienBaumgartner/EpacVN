@@ -1,13 +1,14 @@
 ﻿# The script of the game goes in this file.
 
 # Characters name
-define neonila = Character("Neonila", callback=partial(char_talking, "neonila"))
-define kvin = Character("Kvin", callback=partial(char_talking, "kvin"))
-define lin = Character("Lin", callback=partial(char_talking, "lin"))
-define hans = Character("Hans", callback=partial(char_talking, "hans"))
-define sharon = Character("Sharon", callback=partial(char_talking, "sharon"))
-define derek = Character("Derek", callback=partial(char_talking, "derek"))
+define neonila = Character("Neonila", color="ff69fd", callback=partial(char_talking, "neonila"))
+define kvin = Character("Kvin", color="c47b4e", callback=partial(char_talking, "kvin"))
+define lin = Character("Lin", color="efd693", callback=partial(char_talking, "lin"))
+define hans = Character("Hans", color="b06560", callback=partial(char_talking, "hans"))
+define sharon = Character("Sharon", color="46456b", callback=partial(char_talking, "sharon"))
+define derek = Character("Derek", color="c2bfa6", callback=partial(char_talking, "derek"))
 define stwin = Character("Twin", callback=partial(char_talking, "stwin"))
+define service = Character("Service Bot")
 
 #Effects
 define flash = Fade(.25, 0.0, .25, color="#fff")
