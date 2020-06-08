@@ -3,6 +3,7 @@
 
 # Enter from the map
 label enterBar:
+    play music "/audio/bar_01.mp3"
     scene bg_bar:
         zoom 0.5
     if firstEnterBar:

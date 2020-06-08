@@ -2,6 +2,7 @@
 # Exploration map
 
 label explorationMap:
+    stop music fadeout 1.0
     scene bg map
     menu:
         "Exploration choices"

@@ -3,6 +3,7 @@
 #test
 #Sc 01
 label brochure:
+    stop music
     scene bg brochure
     "Sc 01, tourist advert brochure"
 
@@ -168,7 +169,12 @@ label sitting:
 
     kvin "Yeeaaah! Let me see let me see!"
 
-    lin "Hey, not there that’s where my t- CRACK-"
+    lin "Hey, not there that’s where my t.."
+    with vpunch
+
+    " CRACK-"
+
+
 
     kvin "What? But i didn’t even-"
 
@@ -188,9 +194,11 @@ label findKey:
     show kvin normal at right
     with dissolve
 
-
-
     lin "We should call a waiter to tell them what happe- hey are you even listening to what i say?"
+
+    show cardchip with moveinright:
+            yalign 0.6
+            xalign 0.5
 
     kvin "I got it out! Looks like… an old card? Uh, booooring."
 
@@ -218,6 +226,20 @@ label findKey:
             $ hasAiKey = False
             lin "I can see what you want to do with it just by looking at your eyes… But I won’t let you! I’m calling a waitress, just be happy that seat was already damaged, i won’t tell on you!"
 
+            hide kvin with moveoutright
+
+            show servicerobot_karen normal with moveinright:
+                zoom 0.5
+                xalign 0.9
+
+            service1 "hi thank you"
+
+            hide cardchip
+
+            hide servicerobot_karen normal with moveoutright
+
+            show kvin normal with moveinright
+
             kvin "Oooh cmon you’re not fun… but where were we? Oh yeah i gotta take a look at those cameras!"
 
             lin "Oh god no it’s true that i promised him… "
@@ -237,8 +259,30 @@ label departure:
 
 #Sc 04
 label parade:
+    play music "audio/guggen01.mp3"
 
+    show nr_cara_guggen:
+        zoom 0.2
+        xalign 0.5
+        easein 5.0 xalign 0.5 zoom 0.5
     "Sc 04, Parade"
+
+    #hide nr_cara_guggen
+
+
+
+    show nr_cara_guggen:
+        zoom 0.2
+        xalign 0.5
+        easein 5.0 xalign 0.5 zoom 0.5
+
+
+    "carnabots"
+
+    stop music fadeout 1.0
+
+
+
 
     jump bar
 
