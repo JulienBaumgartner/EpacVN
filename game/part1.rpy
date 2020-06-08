@@ -68,7 +68,7 @@ label sitting:
     scene bg_parade_car with dissolve :
         zoom 0.5
 
-    play music "/audio/trainsteam.wav"
+    play music "/audio/train_01.mp3"
 
     show servicerobot_karen normal with moveinleft:
         zoom 0.5
@@ -244,15 +244,17 @@ label parade:
 
 #Sc 05
 label bar:
+    play music "/audio/bar_01.mp3"
     scene bg_bar:
         zoom 0.5
 
     "Sc 05, bar test"
-
+    stop music fadeout 1.0
     jump bug
 
 #Sc 06
 label bug:
+
     scene bg parade_car
 
 #Sc 07
