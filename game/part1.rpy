@@ -198,8 +198,9 @@ label findKey:
         "Take the card":
             $ hasAiKey = True
 
-            show kvin with move:
-                xalign 0.3
+            show kvin_happy:
+                zoom 0.3
+                #xalign 0.3
             kvin "No way I’m gonna pass up on this! Card’s mine! Hehe!"
 
             show kvin:
@@ -216,10 +217,14 @@ label findKey:
 
             lin "Oh god no it’s true that i promised him… "
 
+    stop music fadeout 1.0
+
     jump departure
 
 #Sc 03
 label departure:
+    scene bg_parade_car_turned_seats:
+        zoom 0.5
 
     "Sc 03, Departure"
 
