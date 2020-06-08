@@ -8,7 +8,7 @@ define hans = Character("Hans", color="b06560", callback=partial(char_talking, "
 define sharon = Character("Sharon", color="46456b", callback=partial(char_talking, "sharon"))
 define derek = Character("Derek", color="c2bfa6", callback=partial(char_talking, "derek"))
 define stwin = Character("Twin", callback=partial(char_talking, "stwin"))
-define service = Character("Service Bot")
+define service1 = Character("Service Bot", callback=partial(char_talking, "servicerobot_karen"))
 
 #Effects
 define flash = Fade(.25, 0.0, .25, color="#fff")
@@ -63,13 +63,13 @@ init -1 python:
                 str_tags = " "
                 if tags != None:
                     str_tags = " ".join(tags)
-                renpy.show(store.speaking_char + " " + str_tags, at_list=[stopTalking])
+                #renpy.show(store.speaking_char + " " + str_tags, at_list=[stopTalking])
             if char != None and renpy.showing(char):
                 tags = renpy.get_attributes(char)
                 str_tags = " "
                 if tags != None:
                     str_tags = " ".join(tags)
-                renpy.show(char + " " + str_tags, at_list=[talking])
+                #renpy.show(char + " " + str_tags, at_list=[talking])
             store.speaking_char = char
 
 label start:

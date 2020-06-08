@@ -68,9 +68,29 @@ label sitting:
     scene bg_parade_car with dissolve :
         zoom 0.5
 
+    play music "/audio/trainsteam.wav"
+
+    show servicerobot_karen normal with moveinleft:
+        zoom 0.5
+
+    service1 "hello"
+    service1 "texte intro bienvenue"
+
+    hide servicerobot_karen with moveoutleft
+
     show kvin normal at right with moveinright
 
-    kvin "Wooow! Me first me first! Hey wow, is that a k-9 doggobot? Oh it almost weighs nothing! … Uh, is that coffee pouring down from him?"
+
+    kvin "Wooow! Me first me first!"
+    show charles_normal :
+            yalign 0.6
+            xalign 0.5
+
+    play sound "/audio/smalldogbark.mp3"
+
+    kvin " Hey wow, is that a k-9 doggobot? Oh it almost weighs nothing! … Uh, is that coffee pouring down from him?"
+
+
 
     show neonila normal at left with moveinleft
 
@@ -85,7 +105,9 @@ label sitting:
     kvin "ooookeeey... weird girl... well let’s get somewhere el- OH HOW MANY CAMERAS DOES THIS GUY HAVE??"
 
     hide neonila with moveoutleft
+    hide charles_normal with moveoutleft
     show lin normal at left with moveinleft
+
 
     lin "DON’T EVEN DARE COMING NEAR ME YOU LITTLE -"
 
@@ -93,6 +115,7 @@ label sitting:
     hide lin
     show hans normal at left:
         xzoom -1
+        yalign 1.0
     with dissolve
 
     hans "Cmon man it’s not that hard... just one wrong move and you’re reptilian’s lunch... no pressure... my body is a temple... GODAMMIT HOW COULD I CALM DOWN IN THIS KIND OF SITUATION??"
@@ -112,6 +135,7 @@ label sitting:
     show sharon normal at outRight with None
     show derek at center:
         xzoom -1
+        yalign 1.0
     show sharon normal at right
     with move
 
@@ -179,8 +203,9 @@ label findKey:
         "Take the card":
             $ hasAiKey = True
 
-            show kvin with move:
-                xalign 0.3
+            show kvin happy:
+                zoom 0.3
+                #xalign 0.3
             kvin "No way I’m gonna pass up on this! Card’s mine! Hehe!"
 
             show kvin:
@@ -197,10 +222,14 @@ label findKey:
 
             lin "Oh god no it’s true that i promised him… "
 
+    stop music fadeout 1.0
+
     jump departure
 
 #Sc 03
 label departure:
+    scene bg_parade_car_turned_seats:
+        zoom 0.5
 
     "Sc 03, Departure"
 
