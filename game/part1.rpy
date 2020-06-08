@@ -10,13 +10,18 @@ label brochure:
 
 #Sc 02
 label sitting:
-    scene bg parade_car
+    scene parade_car_2:
+        zoom 0.5
+
     "Sc 02, Sitting int the train"
 
     jump findKey
 
 #Sc 02.3
 label findKey:
+    scene parade_car_2:
+        xalign 0.0 yalign 0.6
+
 
     "Sc 02.3, find old tourist item keycard"
 
@@ -35,6 +40,8 @@ label findKey:
 
 #Sc 03
 label departure:
+    scene parade_car:
+        zoom 0.5
 
     "Sc 03, Departure"
 

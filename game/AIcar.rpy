@@ -1,8 +1,8 @@
-# Sc 15 
+# Sc 15
 # AI car scenes
 
 label enterAIroom:
-    scene bg_AI_Room
+    scene bg_ai_room
     "Sc 15, discussion with the AI"
     if takeGoodBrotherAI:
         jump uploadGoodBrother

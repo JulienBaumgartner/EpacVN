@@ -47,6 +47,8 @@ label stealAIGoodBrother:
 
 
 label selectThiefGoodBrother:
+    scene bg_bar:
+        zoom 0.5
     menu:
         "Who will steal the chip?"
 

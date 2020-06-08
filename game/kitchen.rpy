@@ -29,19 +29,20 @@ label kitchencar:
 
 #Sc 13
 label goodBrotherRevealDoor:
-    scene bg ai_door
+    scene bg_Exit_Door_closed
     "Sc 13, The good brother reveal the door in the kitchen"
     jump inspectAiDoor
 
 #Sc 13
 label badBrotherRevealDoor:
-    scene bg ai_door
+    scene bg_Exit_Door_closed
     "Sc 13, The bad brother reveal the door in the kitchen"
     jump inspectAiDoor
 
 
 #Sc 13.2 / 13.3
 label inspectAiDoor:
+    scene bg_Exit_Door_closed
     if hasAiKey:
         "Sc 13.3, You have the key."
         jump openAiDoor
