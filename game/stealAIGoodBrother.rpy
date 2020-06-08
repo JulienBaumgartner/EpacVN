@@ -11,7 +11,6 @@ label initStealAIGoodBrother:
         }
     jump stealAIGoodBrother
 
-image distractChr = "[distractPath]"
 image thiefChr = "[thiefPath]"
 
 label stealAIGoodBrother:
@@ -112,74 +111,111 @@ label selectThiefGoodBrother:
             sharon "I better take care of it myself."
 
 
+
+    show sharon normal at right with moveinright
+    sharon "Now we have to choose who will distract the robot, I think we shouldn't send more than 3 people, it would be too suspicious."
+    hide sharon with moveoutright
+    $ distractTeam = []
+    $ distractScore = 0
+
     jump selectDistractorsGoodBrother
 
 
 
 label selectDistractorsGoodBrother:
 
-    if len(charactersList) == 5:
-        show sharon normal at right with moveinright
-        sharon "Now we have to choose who will distract the robot, I think we shouldn't send more than 3 people, it would be too suspicious."
-        hide sharon with moveoutright
-        $ distractTeam = []
-        $ distractScore = 0
-
     menu:
         "Who will distract the robot?"
 
         "Derek" if "derek" in charactersList:
-            $ distractTeam.append([derek, "derek normal.png", charactersList["derek"]["distract"]])
-            $ distractScore += charactersList["derek"]["distract"]
-            $ charactersList.pop("derek")
-
             show derek normal at right with moveinright
             derek "I will ask him if he is ready for war."
+
+            menu:
+                derek "I will ask him if he is ready for war."
+                "Choose Derek":
+                    $ distractTeam.append([derek, charactersList["derek"]["distract"]])
+                    $ distractScore += charactersList["derek"]["distract"]
+                    $ charactersList.pop("derek")
+                "Choose someone else":
+                    $ nothing = ""
+
+
             hide derek with moveoutright
 
         "Hans" if "hans" in charactersList:
-            $ distractTeam.append([hans, "hans normal.png", charactersList["hans"]["distract"]])
-            $ distractScore += charactersList["hans"]["distract"]
-            $ charactersList.pop("hans")
-
             show hans normal at right with moveinright
             hans "I will ask him about the reptilians..."
+
+            menu:
+                hans "I will ask him about the reptilians..."
+                "Choose Hans":
+                    $ distractTeam.append([hans, charactersList["hans"]["distract"]])
+                    $ distractScore += charactersList["hans"]["distract"]
+                    $ charactersList.pop("hans")
+                "Choose someone else":
+                    $ nothing = ""
+
             hide hans with moveoutright
 
         "Lin" if "lin" in charactersList:
-            $ distractTeam.append([lin, "lin normal.png", charactersList["lin"]["distract"]])
-            $ distractScore += charactersList["lin"]["distract"]
-            $ charactersList.pop("lin")
-
             show lin normal at right with moveinright
             lin "I will ask him if he has a lens for my camera."
+
+            menu:
+                lin "I will ask him if he has a lens for my camera."
+                "Choose Lin":
+                    $ distractTeam.append([lin, charactersList["lin"]["distract"]])
+                    $ distractScore += charactersList["lin"]["distract"]
+                    $ charactersList.pop("lin")
+                "Choose someone else":
+                    $ nothing = ""
+
             hide lin with moveoutright
 
         "Kvin" if "kvin" in charactersList:
-            $ distractTeam.append([kvin, "kvin normal.png", charactersList["kvin"]["distract"]])
-            $ distractScore += charactersList["kvin"]["distract"]
-            $ charactersList.pop("kvin")
-
             show kvin normal at right with moveinright
             kvin "I will try to know more about him!"
+
+            menu:
+                kvin "I will try to know more about him!"
+                "Choose Kvin":
+                    $ distractTeam.append([kvin, charactersList["kvin"]["distract"]])
+                    $ distractScore += charactersList["kvin"]["distract"]
+                    $ charactersList.pop("kvin")
+                "Choose someone else":
+                    $ nothing = ""
+
             hide kvin with moveoutright
 
         "Neonila" if "neonila" in charactersList:
-            $ distractTeam.append([neonila, "neonila normal.png", charactersList["neonila"]["distract"]])
-            $ distractScore += charactersList["neonila"]["distract"]
-            $ charactersList.pop("neonila")
-
             show neonila normal at right with moveinright
             neonila "I'm going to film it, it will make a lot of views!"
+
+            menu:
+                neonila "I'm going to film it, it will make a lot of views!"
+                "Choose Neonila":
+                    $ distractTeam.append([neonila, charactersList["neonila"]["distract"]])
+                    $ distractScore += charactersList["neonila"]["distract"]
+                    $ charactersList.pop("neonila")
+                "Choose someone else":
+                    $ nothing = ""
+
             hide neonila with moveoutright
 
         "Sharon" if "sharon" in charactersList:
-            $ distractTeam.append([sharon, "sharon normal.png", charactersList["sharon"]["distract"]])
-            $ distractScore += charactersList["sharon"]["distract"]
-            $ charactersList.pop("sharon")
-
             show sharon normal at right with moveinright
             sharon "I will ask him what is happening on this train."
+
+            menu:
+                sharon "I will ask him what is happening on this train."
+                "Choose Sharon":
+                    $ distractTeam.append([sharon, charactersList["sharon"]["distract"]])
+                    $ distractScore += charactersList["sharon"]["distract"]
+                    $ charactersList.pop("sharon")
+                "Choose someone else":
+                    $ nothing = ""
+
             hide sharon with moveoutright
 
 
@@ -192,7 +228,7 @@ label startStealGameGoodBrother:
 
     $ thiefX = 1.4
 
-    scene bg_storage:
+    scene bg_bar:
         zoom 0.5
     show stwin normal at topcenter zorder 10
     show thiefChr:
@@ -211,10 +247,8 @@ label startStealGameGoodBrother:
 define moveThief = { "master" : MoveTransition(0.5) }
 
 label distractRobotGoodBrother:
-    $ distractPath = distractTeam[distractIndex][1]
-    show distractChr at left with moveinleft
-
     if distractTeam[distractIndex][0] == derek:
+        show derek normal at left with moveinleft
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -240,7 +274,10 @@ label distractRobotGoodBrother:
         with moveThief
         $ thiefX = thiefX - thiefSpeed
         derek "All right, but you shouldn't complain if you lose the war..."
+        if distractIndex < 2:
+            hide derek with moveoutleft
     elif distractTeam[distractIndex][0] == lin:
+        show lin normal at left with moveinleft
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -266,7 +303,10 @@ label distractRobotGoodBrother:
         with moveThief
         $ thiefX = thiefX - thiefSpeed
         lin "I will not insist, sorry for the inconvenience."
+        if distractIndex < 2:
+            hide lin with moveoutleft
     elif distractTeam[distractIndex][0] == kvin:
+        show kvin normal at left with moveinleft
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -292,7 +332,10 @@ label distractRobotGoodBrother:
         with moveThief
         $ thiefX = thiefX - thiefSpeed
         kvin "Okay..."
+        if distractIndex < 2:
+            hide kvin with moveoutleft
     elif distractTeam[distractIndex][0] == hans:
+        show hans normal at left with moveinleft
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -318,7 +361,10 @@ label distractRobotGoodBrother:
         with moveThief
         $ thiefX = thiefX - thiefSpeed
         hans "Did I piss off the reptilians? I better leave..."
+        if distractIndex < 2:
+            hide hans with moveoutleft
     elif distractTeam[distractIndex][0] == sharon:
+        show sharon normal at left with moveinleft
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -344,7 +390,10 @@ label distractRobotGoodBrother:
         with moveThief
         $ thiefX = thiefX - thiefSpeed
         sharon "It will not happen like that, I will file a complaint."
+        if distractIndex < 2:
+            hide sharon with moveoutleft
     elif distractTeam[distractIndex][0] == neonila:
+        show neonila normal at left with moveinleft
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -370,10 +419,11 @@ label distractRobotGoodBrother:
         with moveThief
         $ thiefX = thiefX - thiefSpeed
         neonila "Ok, ok ... Sorry my viewers, the live will be shorter than expected!"
+        if distractIndex < 2:
+            hide neonila with moveoutleft
 
 
     if distractIndex < 2:
-        hide distractChr with moveoutleft
         $ distractIndex = distractIndex + 1
         jump distractRobotGoodBrother
 
@@ -386,7 +436,9 @@ label distractRobotGoodBrother:
     else:
         show distractChr at outLeft
         show thiefChr at right
-        show stwin at topleft
+        show stwin:
+            xalign 0.4
+            yalign 0.0
         with move
         stwin "Hey! You! What are you doing?!?"
         thiefName "I ..."
