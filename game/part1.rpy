@@ -35,6 +35,7 @@ label sitting:
     hide neonila with moveoutleft
     show sharon normal at left with moveinleft:
         xzoom -1
+        yalign 1.0
 
     sharon "What in the Lord’s name have I done to deserve this? I swear, sometimes I would think my son tries to kill me."
     sharon "My own blood, betraying me like so! I have so much to do back home, an empire to rule, money to gain, investor to manipulate, my husband’s possession to claim, and yet-"
