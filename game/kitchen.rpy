@@ -3,7 +3,7 @@
 
 # Enter from the map
 label enterKitchen:
-    scene bg kitchen
+    scene bg_kitchen_door_closed
     if firstEnterKitchen:
         jump kitchencar
 

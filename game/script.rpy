@@ -1,13 +1,14 @@
 ﻿# The script of the game goes in this file.
 
 # Characters name
-define neonila = Character("Neonila")
-define kvin = Character("Kvin")
-define lin = Character("Lin")
-define hans = Character("Hans")
-define sharon = Character("Sharon")
-define derek = Character("Derek")
+define neonila = Character("Neonila", color="ff69fd")
+define kvin = Character("Kvin", color="c47b4e")
+define lin = Character("Lin", color="efd693")
+define hans = Character("Hans", color="b06560")
+define sharon = Character("Sharon", color="46456b")
+define derek = Character("Derek", color="c2bfa6")
 define stwin = Character("Twin")
+define service = Character("Service Bot")
 
 #Effects
 define flash = Fade(.25, 0.0, .25, color="#fff")

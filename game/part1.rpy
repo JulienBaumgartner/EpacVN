@@ -64,7 +64,8 @@ label sitting:
 
     sharon "And here we go again... Holy, this is going to be take a while before home."
 
-    scene bg parade_car with dissolve
+    scene bg_parade_car with dissolve :
+        zoom 0.5
 
     show kvin normal at right with moveinright
 
@@ -156,6 +157,11 @@ label sitting:
 
 #Sc 02.3
 label findKey:
+    scene bg_parade_car :
+        xalign 0.0 yalign 0.5
+
+
+
 
     lin "We should call a waiter to tell them what happe- hey are you even listening to what i say?"
 
@@ -219,6 +225,10 @@ label bug:
 
 #Sc 07
 label crazybot:
+    scene bg_parade_car_turned_seats:
+        zoom 0.5
+    show room-deactivated_onlyrobots:
+        zoom 0.5
 
     "Sc 07, Carnabots crazy, dog death"
 
