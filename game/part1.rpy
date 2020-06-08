@@ -159,7 +159,9 @@ label sitting:
 label findKey:
     scene bg_parade_car :
         xalign 0.0 yalign 0.5
-
+    show lin normal at left
+    show kvin normal at right
+    with dissolve
 
 
 
