@@ -67,9 +67,29 @@ label sitting:
     scene bg_parade_car with dissolve :
         zoom 0.5
 
+    play music "/audio/trainsteam.wav"
+
+    show servicerobot_karen_normal with moveinleft:
+        zoom 0.5
+
+    service1 "hello"
+    service1 "texte intro bienvenue"
+
+    hide servicerobot_karen_normal with moveoutleft
+
     show kvin normal at right with moveinright
 
-    kvin "Wooow! Me first me first! Hey wow, is that a k-9 doggobot? Oh it almost weighs nothing! … Uh, is that coffee pouring down from him?"
+
+    kvin "Wooow! Me first me first!"
+    show charles_normal :
+            yalign 0.6
+            xalign 0.5
+
+    play sound "/audio/smalldogbark.mp3"
+
+    kvin " Hey wow, is that a k-9 doggobot? Oh it almost weighs nothing! … Uh, is that coffee pouring down from him?"
+
+
 
     show neonila normal at left with moveinleft
 
@@ -84,7 +104,9 @@ label sitting:
     kvin "ooookeeey... weird girl... well let’s get somewhere el- OH HOW MANY CAMERAS DOES THIS GUY HAVE??"
 
     hide neonila with moveoutleft
-    show lin normal at left with moveinleft
+    hide charles_normal with moveoutleft
+    show lin normal at left with moveinleft:
+
 
     lin "DON’T EVEN DARE COMING NEAR ME YOU LITTLE -"
 

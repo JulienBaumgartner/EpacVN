@@ -6,9 +6,9 @@ define kvin = Character("Kvin", color="c47b4e")
 define lin = Character("Lin", color="efd693")
 define hans = Character("Hans", color="b06560")
 define sharon = Character("Sharon", color="46456b")
-define derek = Character("Derek", color="c2bfa6")
+define derek = Character("Derek", color="efd693")
 define stwin = Character("Twin")
-define service = Character("Service Bot")
+define service1 = Character("Service Bot")
 
 #Effects
 define flash = Fade(.25, 0.0, .25, color="#fff")
