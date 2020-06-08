@@ -1,13 +1,13 @@
 ﻿# The script of the game goes in this file.
 
 # Characters name
-define neonila = Character("Neonila")
-define kvin = Character("Kvin")
-define lin = Character("Lin")
-define hans = Character("Hans")
-define sharon = Character("Sharon")
-define derek = Character("Derek")
-define stwin = Character("Twin")
+define neonila = Character("Neonila", callback=partial(char_talking, "neonila"))
+define kvin = Character("Kvin", callback=partial(char_talking, "kvin"))
+define lin = Character("Lin", callback=partial(char_talking, "lin"))
+define hans = Character("Hans", callback=partial(char_talking, "hans"))
+define sharon = Character("Sharon", callback=partial(char_talking, "sharon"))
+define derek = Character("Derek", callback=partial(char_talking, "derek"))
+define stwin = Character("Twin", callback=partial(char_talking, "stwin"))
 
 #Effects
 define flash = Fade(.25, 0.0, .25, color="#fff")
@@ -44,6 +44,32 @@ transform outLeft:
 transform outRight:
     xalign 1.5
     yalign 1.0
+
+transform talking:
+    linear 0.1 zoom 1.01
+
+transform stopTalking:
+    linear 0.1 zoom 1.00
+
+default speaking_char = None
+
+init -1 python:
+    from functools import partial
+    def char_talking(char, event_name, *args, **kwargs):
+        if event_name == "begin" and char != store.speaking_char:
+            if store.speaking_char != None and renpy.showing(store.speaking_char):
+                tags = renpy.get_attributes(store.speaking_char)
+                str_tags = " "
+                if tags != None:
+                    str_tags = " ".join(tags)
+                renpy.show(store.speaking_char + " " + str_tags, at_list=[stopTalking])
+            if char != None and renpy.showing(char):
+                tags = renpy.get_attributes(char)
+                str_tags = " "
+                if tags != None:
+                    str_tags = " ".join(tags)
+                renpy.show(char + " " + str_tags, at_list=[talking])
+            store.speaking_char = char
 
 label start:
 
