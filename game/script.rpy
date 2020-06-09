@@ -1,5 +1,5 @@
 ﻿# The script of the game goes in this file.
-
+#test
 # Characters name
 define neonila = Character("Neonila", color="ff69fd", callback=partial(char_talking, "neonila"))
 define kvin = Character("Kvin", color="c47b4e", callback=partial(char_talking, "kvin"))
