@@ -331,6 +331,12 @@ label crazybot:
         zoom 0.5
 
     service1 "jump on you"
+    hide servicerobot_karen_broken
+    show servicerobot_karen_broken:
+        yalign 0.01 xalign 0.5
+    pause
+    hide servicerobot_karen_broken with moveoutbottom
+    pause
 
 label returnnormal:
     scene bg_parade_car with dissolve:

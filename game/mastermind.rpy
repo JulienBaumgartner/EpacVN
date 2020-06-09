@@ -136,5 +136,7 @@ label passwordGameWin:
 label passwordGameLose:
     hide screen passwordGame
     hide screen passwordTuto
+    scene bg_badend
+    "you are dead"
 
     jump gameover1 #gameovers.rpy
