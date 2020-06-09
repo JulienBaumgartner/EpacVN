@@ -133,7 +133,7 @@ label selectDistractorsGoodBrother:
 
             menu:
                 derek "I will ask him if he is ready for war."
-                "Choose Derek":
+                "Confirm Derek":
                     $ distractTeam.append([derek, charactersList["derek"]["distract"]])
                     $ distractScore += charactersList["derek"]["distract"]
                     $ charactersList.pop("derek")
@@ -149,7 +149,7 @@ label selectDistractorsGoodBrother:
 
             menu:
                 hans "I will ask him about the reptilians..."
-                "Choose Hans":
+                "Confirm Hans":
                     $ distractTeam.append([hans, charactersList["hans"]["distract"]])
                     $ distractScore += charactersList["hans"]["distract"]
                     $ charactersList.pop("hans")
@@ -164,7 +164,7 @@ label selectDistractorsGoodBrother:
 
             menu:
                 lin "I will ask him if he has a lens for my camera."
-                "Choose Lin":
+                "Confirm Lin":
                     $ distractTeam.append([lin, charactersList["lin"]["distract"]])
                     $ distractScore += charactersList["lin"]["distract"]
                     $ charactersList.pop("lin")
@@ -179,7 +179,7 @@ label selectDistractorsGoodBrother:
 
             menu:
                 kvin "I will try to know more about him!"
-                "Choose Kvin":
+                "Confirm Kvin":
                     $ distractTeam.append([kvin, charactersList["kvin"]["distract"]])
                     $ distractScore += charactersList["kvin"]["distract"]
                     $ charactersList.pop("kvin")
@@ -194,7 +194,7 @@ label selectDistractorsGoodBrother:
 
             menu:
                 neonila "I'm going to film it, it will make a lot of views!"
-                "Choose Neonila":
+                "Confirm Neonila":
                     $ distractTeam.append([neonila, charactersList["neonila"]["distract"]])
                     $ distractScore += charactersList["neonila"]["distract"]
                     $ charactersList.pop("neonila")
@@ -209,7 +209,7 @@ label selectDistractorsGoodBrother:
 
             menu:
                 sharon "I will ask him what is happening on this train."
-                "Choose Sharon":
+                "Confirm Sharon":
                     $ distractTeam.append([sharon, charactersList["sharon"]["distract"]])
                     $ distractScore += charactersList["sharon"]["distract"]
                     $ charactersList.pop("sharon")
@@ -230,7 +230,8 @@ label startStealGameGoodBrother:
 
     scene bg_bar:
         zoom 0.5
-    show stwin normal at topcenter zorder 10
+    show kais_sad at topcenter zorder 10:
+        zoom 0.5
     show thiefChr:
         xalign thiefX
         yalign 1.0
@@ -258,7 +259,7 @@ label distractRobotGoodBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "A war? Nobody attacked us!"
+        goodbrother "A war? Nobody attacked us!"
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -268,7 +269,7 @@ label distractRobotGoodBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "The security system is fully operational, I don't need your advice."
+        goodbrother "The security system is fully operational, I don't need your advice."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -287,7 +288,7 @@ label distractRobotGoodBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "No, this storage is not for you."
+        goodbrother "No, this storage is not for you."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -297,7 +298,7 @@ label distractRobotGoodBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "Enough! I will not help you!"
+        goodbrother "Enough! I will not help you!"
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -316,7 +317,7 @@ label distractRobotGoodBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "I take care of the inventory of our spare parts and I store them in this room."
+        goodbrother "I take care of the inventory of our spare parts and I store them in this room."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -326,7 +327,7 @@ label distractRobotGoodBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "I don't have time to answer you kid, leave me alone."
+        goodbrother "I don't have time to answer you kid, leave me alone."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -345,7 +346,7 @@ label distractRobotGoodBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "A reptilian? What are you talking about?"
+        goodbrother "A reptilian? What are you talking about?"
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -355,7 +356,7 @@ label distractRobotGoodBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "You are just crazy, get out of here."
+        goodbrother "You are just crazy, get out of here."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -374,7 +375,7 @@ label distractRobotGoodBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "I don't know what you mean, everything is as usual."
+        goodbrother "I don't know what you mean, everything is as usual."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -384,7 +385,7 @@ label distractRobotGoodBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "I said that everything is as usual, if you have nothing else to say, go away."
+        goodbrother "I said that everything is as usual, if you have nothing else to say, go away."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -403,7 +404,7 @@ label distractRobotGoodBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "Hey you! Filming here is not allowed, stop it."
+        goodbrother "Hey you! Filming here is not allowed, stop it."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -413,7 +414,7 @@ label distractRobotGoodBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "Stop it right now if you wanna leave alive!"
+        goodbrother "Stop it right now if you wanna leave alive!"
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -428,21 +429,34 @@ label distractRobotGoodBrother:
         jump distractRobotGoodBrother
 
     if thiefScore <= distractScore:
-        stwin "{i}[[Error: AI chip missing. System shutdown...]{/i}"
+        goodbrother "{i}[[Error: AI chip missing. System shutdown...]{/i}"
+
+        hide kais_sad
+        show kais_deactivated:
+            zoom 0.5
+
+        show chipbot with moveinbottom:
+            yalign 0.5
+            xalign 0.5
+
         show thiefChr at right with move
         thiefName "I have the chip!"
+
+        hide chipbot with moveoutbottom
+
         $ takeGoodBrotherAI = True
+
         jump badBrotherRevealDoor # kitchen.rpy
     else:
         show distractChr at outLeft
         show thiefChr at right
-        show stwin:
+        show goodbrother:
             xalign 0.4
             yalign 0.0
         with move
-        stwin "Hey! You! What are you doing?!?"
+        goodbrother "Hey! You! What are you doing?!?"
         thiefName "I ..."
-        stwin "Get out of here!"
+        goodbrother "Get out of here!"
         $ failGoodBrotherSteal = True
         if failBadBrotherSteal:
             jump gameover1 # gameovers.rpy

@@ -333,13 +333,17 @@ label crazybot:
     service1 "jump on you"
 
 label returnnormal:
-    show bg_parade_car with dissolve:
+    scene bg_parade_car with dissolve:
         zoom 0.5
 
     show room-deactivated_onlyrobots:
         zoom 0.5
 
     "all robots drops"
+
+    scene bg_parade_car:
+        xalign 0.6
+        yalign 0.4
 
     "let's go to the kitchen"
 

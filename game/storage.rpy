@@ -36,12 +36,10 @@ label firstStorage:
 
 label badBrotherActions:
 
-    scene bg_storage_empty:
-        yalign 0.1
-        xalign 0.9
+    
 
-    show kais_storage_normal with moveintop:
-        zoom 0.4
+    #show kais_storage_normal with moveintop:
+        #zoom 0.4
     if goodBrotherAskHelp and not takeGoodBrotherAI:
         menu:
             "What do you want to do with the bad brother?"

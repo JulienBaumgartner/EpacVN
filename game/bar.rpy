@@ -25,6 +25,9 @@ label firstBar:
 
 
 label goodBrotherActions:
+    show kais_normal with moveinright:
+        zoom 0.4
+
     if badBrotherAskHelp and not takeBadBrotherAI:
         menu:
             "What do you want to do with the good brother?"
