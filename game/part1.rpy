@@ -259,6 +259,8 @@ label departure:
 
 #Sc 04
 label parade:
+    scene bg_parade_car_confetti:
+        zoom 0.5
     play music "audio/guggen01.mp3"
 
     show nr_cara_guggen:
@@ -267,22 +269,14 @@ label parade:
         easein 5.0 xalign 0.5 zoom 0.5
     "Sc 04, Parade"
 
-    #hide nr_cara_guggen
-
-
-
     show nr_cara_guggen:
         zoom 0.2
         xalign 0.5
         easein 5.0 xalign 0.5 zoom 0.5
 
-
     "carnabots"
 
     stop music fadeout 1.0
-
-
-
 
     jump bar
 
@@ -303,15 +297,52 @@ label bar:
 #Sc 06
 label bug:
 
-    scene bg parade_car
+    show animation_alerte:
+    #scene in animation:
+        zoom 0.5
+
+    "bug"
+    "description du bug"
+
+    show charles_broken with vpunch:
+        yalign 0.7
+        xalign 0.5
+    "crack"
+    hide charles_broken
 
 #Sc 07
 label crazybot:
-    scene bg_parade_car_turned_seats:
+
+    show nr_cara_guggen_crazy with moveinbottom:
         zoom 0.5
+        xalign 0.5
+        easein 5.0 xalign 0.5 zoom 1
+
+    "Sc 07, Carnabots crazy, dog death"
+
+    hide nr_cara_guggen_crazy with moveoutbottom
+
+    show servicerobot_karen normal with moveinright:
+        zoom 0.5
+    service1 "are you ok"
+
+    hide servicerobot_karen normal
+    show servicerobot_karen_broken with vpunch:
+        zoom 0.5
+
+    service1 "jump on you"
+
+label returnnormal:
+    show bg_parade_car with dissolve:
+        zoom 0.5
+
     show room-deactivated_onlyrobots:
         zoom 0.5
 
-    "Sc 07, Carnabots crazy, dog death"
+    "all robots drops"
+
+    "let's go to the kitchen"
+
+
 
     jump enterKitchen #kitchen.rpy
