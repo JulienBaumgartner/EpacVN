@@ -8,7 +8,10 @@ define hans = Character("Hans", color="b06560", callback=partial(char_talking, "
 define sharon = Character("Sharon", color="46456b", callback=partial(char_talking, "sharon"))
 define derek = Character("Derek", color="c2bfa6", callback=partial(char_talking, "derek"))
 define stwin = Character("Twin", callback=partial(char_talking, "stwin"))
-define service1 = Character("Service Bot", callback=partial(char_talking, "servicerobot_karen"))
+define service1 = Character("Service Bot", callback=partial(char_talking, "servicerobot_karen"), who_font="font/Syncopate-Bold.ttf")
+define goodbrother = Character("Bar Bot", callback=partial(char_talking, "Bar Bot"), who_font="font/Syncopate-Bold.ttf")
+define badbrother = Character("Storage Bot", callback=partial(char_talking, "Storage Bot"), who_font="font/Syncopate-Bold.ttf")
+define carnabot = Character("Carnabot", callback=partial(char_talking, "Carnabot"), who_font="font/Syncopate-Bold.ttf")
 
 #Effects
 define flash = Fade(.25, 0.0, .25, color="#fff")

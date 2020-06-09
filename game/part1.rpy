@@ -292,7 +292,11 @@ label bar:
     scene bg_bar:
         zoom 0.5
 
-    "Sc 05, bar test"
+    show kais_normal with moveinright:
+        zoom 0.4
+
+
+    goodbrother "Welcome customers"
     stop music fadeout 1.0
     jump bug
 

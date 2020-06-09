@@ -16,9 +16,12 @@ label enterBar:
 
 #Sc 08.2
 label firstBar:
+    show kais_normal with moveinright:
+        zoom 0.4
     "First enter in the bar"
     $ firstEnterBar = False
     jump goodBrotherActions
+
 
 
 label goodBrotherActions:
@@ -36,7 +39,8 @@ label goodBrotherActions:
 
 label discussGoodBrother:
     if not goodBrotherAskHelp:
-        "Good brother request: take bad brother AI"
+
+        goodbrother "Good brother request: take bad brother AI"
         $ goodBrotherAskHelp = True
     else:
         "You don't have the bad brother AI"
