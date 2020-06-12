@@ -7,6 +7,15 @@ label brochure:
     scene bg brochure
     "Sc 01, tourist advert brochure"
 
+    #Test for Sharon pose, to delete later
+    show sharon normal at right with moveinright
+    "sharon normal.png"
+    show sharon angry
+    "sharon angry.png"
+    show sharon surprised
+    "sharon surprised.png"
+    hide sharon with moveoutright
+
     jump sitting
 
 #Sc 02
