@@ -271,8 +271,7 @@ label distractRobotBadBrother:
         with moveThief
         $ thiefX = thiefX - thiefSpeed
         derek "All right, but you shouldn't complain if you lose the war..."
-        if distractIndex < 2:
-            hide derek with moveoutleft
+        hide derek with moveoutleft
     elif distractTeam[distractIndex][0] == lin:
         show lin normal at left with moveinleft
         show thiefChr:
@@ -300,8 +299,7 @@ label distractRobotBadBrother:
         with moveThief
         $ thiefX = thiefX - thiefSpeed
         lin "I will not insist, sorry for the inconvenience."
-        if distractIndex < 2:
-            hide lin with moveoutleft
+        hide lin with moveoutleft
     elif distractTeam[distractIndex][0] == kvin:
         show kvin normal at left with moveinleft
         show thiefChr:
@@ -329,8 +327,7 @@ label distractRobotBadBrother:
         with moveThief
         $ thiefX = thiefX - thiefSpeed
         kvin "Okay..."
-        if distractIndex < 2:
-            hide kvin with moveoutleft
+        hide kvin with moveoutleft
     elif distractTeam[distractIndex][0] == hans:
         show hans normal at left with moveinleft
         show thiefChr:
@@ -358,8 +355,7 @@ label distractRobotBadBrother:
         with moveThief
         $ thiefX = thiefX - thiefSpeed
         hans "Did I piss off the reptilians? I better leave..."
-        if distractIndex < 2:
-            hide hans with moveoutleft
+        hide hans with moveoutleft
     elif distractTeam[distractIndex][0] == sharon:
         show sharon normal at left with moveinleft
         show thiefChr:
@@ -387,8 +383,7 @@ label distractRobotBadBrother:
         with moveThief
         $ thiefX = thiefX - thiefSpeed
         sharon "It will not happen like that, I will file a complaint."
-        if distractIndex < 2:
-            hide sharon with moveoutleft
+        hide sharon with moveoutleft
     elif distractTeam[distractIndex][0] == neonila:
         show neonila normal at left with moveinleft
         show thiefChr:
@@ -416,8 +411,7 @@ label distractRobotBadBrother:
         with moveThief
         $ thiefX = thiefX - thiefSpeed
         neonila "Ok, ok ... Sorry my viewers, the live will be shorter than expected!"
-        if distractIndex < 2:
-            hide neonila with moveoutleft
+        hide neonila with moveoutleft
 
 
     if distractIndex < 2:
