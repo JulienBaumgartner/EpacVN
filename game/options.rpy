@@ -5,6 +5,7 @@
 ## may want to uncomment them when appropriate.
 
 define config.rollback_enabled = True
+define config.default_music_volume = 0.2
 
 ## Basics ######################################################################
 
