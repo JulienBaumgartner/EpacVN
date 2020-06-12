@@ -30,6 +30,10 @@ init python:
             badPasswords += 1
             if badPasswords == 5:
                 renpy.jump("passwordMistakes")
+            elif badPasswords == 9:
+                renpy.jump("passwordMistakes2")
+            elif badPasswords == 10:
+                renpy.jump("passwordGameLose")
 
 screen passwordGame():
     frame:
@@ -121,7 +125,20 @@ label passwordMistakes:
     hide screen passwordGame
     hide screen passwordTuto
 
-    "Be careful, after a certain number of errors, the security system can kill your characters."
+    show sharon normal at right with moveinright
+    sharon "I don't want to stress you out but ... We don't have much time left and it is out of the question for it to end this way, so hurry and get us out!"
+    hide sharon with moveoutright
+
+    show screen passwordTuto
+    call screen passwordGame
+
+label passwordMistakes2:
+    hide screen passwordGame
+    hide screen passwordTuto
+
+    show hans normal at right with moveinright
+    hans "THE END IS COMING! IT'S ALL THEIR FAULT! WHY CAN'T ANYONE OPEN THAT DAMN DOOR?!?"
+    hide hans with moveoutright
 
     show screen passwordTuto
     call screen passwordGame
