@@ -101,9 +101,9 @@ screen screenEscapeGame():
                 xalign 0.5
 
 
-transform test_move:
-    xalign 1.3 yalign 0.0
-    linear 45.0 xalign 0.5
+transform smoke_move:
+    xalign 0.5 yalign -0.5
+    linear 46.0 yalign 1.0
 
 screen countdown:
     timer 1 repeat True action If(time > 0, true=SetVariable('time', time - 1), false=[Hide('countdown'), Jump("escapelose")])
@@ -116,7 +116,7 @@ label escapegame:
     call screen kitchenEscapeTuto
 
 
-    show stwin normal at test_move
+    show toxic-smoke at smoke_move
     $ time = 45
     show screen countdown
     call screen screenEscapeGame
