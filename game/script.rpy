@@ -9,7 +9,7 @@ define derek = Character("Derek", color="c2bfa6", callback=partial(char_talking,
 define stwin = Character("Twin", callback=partial(char_talking, "stwin"))
 define service1 = Character("Service Bot", callback=partial(char_talking, "servicerobot_karen"), who_font="font/Syncopate-Bold.ttf")
 define goodbrother = Character("Bar Bot", callback=partial(char_talking, "Bar Bot"), who_font="font/Syncopate-Bold.ttf")
-define badbrother = Character("Storage Bot", callback=partial(char_talking, "Storage Bot"), who_font="font/Syncopate-Bold.ttf")
+define badbrother = Character("kais_storage", callback=partial(char_talking, "Storage Bot"), who_font="font/Syncopate-Bold.ttf")
 define carnabot = Character("Carnabot", callback=partial(char_talking, "Carnabot"), who_font="font/Syncopate-Bold.ttf")
 
 #Effects

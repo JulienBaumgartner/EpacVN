@@ -24,18 +24,21 @@ label kitchencar:
     $ firstEnterKitchen = False
     "Sc 09, kitchen car"
     "Old tourist group dead"
+    play sound "/audio/porte01.mp3"
     "locked inside"
     jump startpasswordgame #mastermind.rpy
 
 #Sc 13
 label goodBrotherRevealDoor:
     scene bg_kitchen_door_opened
+    play sound "/audio/porte01.mp3"
     "Sc 13, The good brother reveal the door in the kitchen"
     jump inspectAiDoor
 
 #Sc 13
 label badBrotherRevealDoor:
     scene bg_kitchen_door_opened
+    play sound "/audio/porte01.mp3"
     "Sc 13, The bad brother reveal the door in the kitchen"
     jump inspectAiDoor
 

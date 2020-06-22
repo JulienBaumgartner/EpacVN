@@ -270,7 +270,7 @@ label departure:
 label parade:
     scene bg_parade_car_confetti:
         zoom 0.5
-    play music "audio/guggen01.mp3"
+    play music "audio/katy_edit_loop.mp3"
 
     show nr_cara_guggen:
         zoom 0.2

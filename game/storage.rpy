@@ -4,6 +4,7 @@
 
 # Enter from the map
 label enterStorage:
+    play music "/audio/storage 01.mp3"
     scene bg_storage:
         zoom 0.5
     if firstEnterStorage:
@@ -12,6 +13,7 @@ label enterStorage:
         jump badBrotherActions
     else:
         "Nothing to do here"
+        stop music fadeout 1.0
         jump explorationMap # explorationMap.rpy
 
 #Sc 08.2
@@ -36,7 +38,7 @@ label firstStorage:
 
 label badBrotherActions:
 
-    
+
 
     #show kais_storage_normal with moveintop:
         #zoom 0.4
@@ -65,8 +67,10 @@ label discussBadBrother:
                 jump explorationMap # explorationMap.rpy
             "Take AI":
                 jump takeAIBadBrother
+    stop music fadeout 1.0
     jump explorationMap # explorationMap.rpy
 
 #Sc 12
 label takeAIBadBrother:
+    stop music fadeout 1.0
     jump initStealAIBadBrother # stealAIBadBrother.rpy

@@ -146,6 +146,7 @@ label passwordMistakes2:
 label passwordGameWin:
     hide screen passwordGame
     hide screen passwordTuto
+    play sound "/audio/porte01.mp3"
     "Success, you leave the kitchen car."
     $ escapeKitchenCar = True
     jump explorationMap # explorationMap.rpy

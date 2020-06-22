@@ -16,6 +16,7 @@ image thiefChr = "[thiefPath]"
 label stealAIBadBrother:
     scene bg_storage:
         zoom 0.5
+    play music "/audio/musique_suspens.mp3"
 
     show derek normal at right with moveinright
     derek "So, how are we going to take this AI?"
@@ -227,7 +228,10 @@ label startStealGameBadBrother:
 
     scene bg_storage:
         zoom 0.5
-    show stwin normal at topcenter zorder 10
+    show kais_storage_normal with moveintop:
+        xalign 0.5
+        zoom 0.5
+        #zorder 10
     show thiefChr:
         xalign thiefX
         yalign 1.0
@@ -419,6 +423,12 @@ label distractRobotBadBrother:
         jump distractRobotBadBrother
 
     if thiefScore <= distractScore:
+        hide kais_storage_normal
+        stop music fadeout 1.0
+        show kais_storage_deactivated:
+            zoom 0.5
+            xalign 0.5
+        play sound "/audio/robot_power_off.mp3"
         stwin "{i}[[Error: AI chip missing. System shutdown...]{/i}"
         show thiefChr at right with move
         thiefName "I have the chip!"

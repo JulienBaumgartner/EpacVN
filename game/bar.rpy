@@ -12,6 +12,7 @@ label enterBar:
         jump goodBrotherActions
     else:
         "Nothing to do here"
+        stop music fadeout 1.0
         jump explorationMap #explorationMap.rpy
 
 #Sc 08.2
@@ -51,6 +52,7 @@ label discussGoodBrother:
     if badBrotherAskHelp:
         menu:
             "Explore":
+                stop music fadeout 1.0
                 jump explorationMap
             "Take AI":
                 jump takeAIGoodBrother
