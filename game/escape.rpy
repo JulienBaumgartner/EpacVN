@@ -41,6 +41,7 @@ screen screenEscapeGame():
     default currentval4 = renpy.random.randint(1,30)
     default currentval5 = renpy.random.randint(1,30)
 
+
     frame:
         xalign 0.0 ypos 50
         xsize 590
@@ -109,7 +110,7 @@ screen countdown:
     timer 1 repeat True action If(time > 0, true=SetVariable('time', time - 1), false=[Hide('countdown'), Jump("escapelose")])
 
 label escapegame:
-
+    play sound "audio/gaz.mp3" loop
     show hans normal:
         xalign 0.4 yalign 1.0
 
@@ -132,9 +133,10 @@ label escapewin:
         "Sc 15.1.3, force exit"
     else:
         scene bg_exit_door_opened
+        play sound "audio/porte01.mp3"
         "Sc 15.2.1, bad brother grateful."
         "Sc 15.2.3, reveal exit"
-
+    stop music fadeout 0.5
     jump revelation # bunker.rpy
 
 

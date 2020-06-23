@@ -78,7 +78,7 @@ label sitting:
     scene bg_parade_car with dissolve :
         zoom 0.5
 
-    play music "/audio/train_01.mp3"
+    play music "/audio/train_01.mp3" fadein 1.0
 
     show servicerobot_karen normal with moveinleft:
         zoom 0.5
@@ -262,7 +262,7 @@ label departure:
     scene bg_parade_car_turned_seats:
         zoom 0.5
     play sound "/audio/door_closing.mp3"
-    play music "/audio/train_roule.mp3"
+    play music "/audio/train_roule.mp3" fadein 0.5
     "Sc 03, Departure"
 
     jump parade
@@ -271,7 +271,7 @@ label departure:
 label parade:
     scene bg_parade_car_confetti:
         zoom 0.5
-    play music "audio/katy_edit_loop.mp3"
+    play music "audio/katy_edit_loop.mp3" fadein 0.5
 
     show nr_cara_guggen:
         zoom 0.2
@@ -314,7 +314,7 @@ label bug:
 
     "bug"
     "description du bug"
-
+    play sound "/audio/crash_dog.mp3"
     show charles_broken with vpunch:
         yalign 0.7
         xalign 0.5
@@ -323,6 +323,7 @@ label bug:
 
 #Sc 07
 label crazybot:
+    play sound "audio/robot_glitch01.mp3"
 
     show nr_cara_guggen_crazy with moveinbottom:
         zoom 0.5
@@ -331,6 +332,7 @@ label crazybot:
 
     "Sc 07, Carnabots crazy, dog death"
 
+
     hide nr_cara_guggen_crazy with moveoutbottom
 
     show servicerobot_karen normal with moveinright:
@@ -338,6 +340,7 @@ label crazybot:
     service1 "are you ok"
 
     hide servicerobot_karen normal
+    play sound "audio/robot_glitch02.mp3"
     show servicerobot_karen_broken with vpunch:
         zoom 0.5
 

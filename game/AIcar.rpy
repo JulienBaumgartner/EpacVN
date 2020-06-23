@@ -3,6 +3,7 @@
 
 label enterAIroom:
     scene bg_ai_room
+    play music "audio/ai_car_01.mp3"
     "Sc 15, discussion with the AI"
     scene bg_exit_door_closed
     "door closed"
