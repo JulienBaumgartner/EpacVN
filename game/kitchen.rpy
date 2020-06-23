@@ -3,6 +3,7 @@
 
 # Enter from the map
 label enterKitchen:
+    play music "/audio/kitchen01.mp3"
     scene bg_kitchen_door_closed
     if firstEnterKitchen:
         jump kitchencar
@@ -23,9 +24,11 @@ label kitchencar:
 
     $ firstEnterKitchen = False
     "Sc 09, kitchen car"
+    scene bg_kitchen_bacameat
     "Old tourist group dead"
     play sound "/audio/porte01.mp3"
     "locked inside"
+    scene bg_kitchen_mdp
     jump startpasswordgame #mastermind.rpy
 
 #Sc 13
@@ -47,6 +50,9 @@ label badBrotherRevealDoor:
 label inspectAiDoor:
     scene bg_kitchen_door_opened
     if hasAiKey:
+        show cardchip with moveinright:
+                yalign 0.6
+                xalign 0.5
         "Sc 13.3, You have the key."
         jump openAiDoor
     jump searchAiDoorKey

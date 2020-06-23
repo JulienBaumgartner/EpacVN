@@ -35,6 +35,7 @@ init python:
             elif badPasswords == 10:
                 renpy.jump("passwordGameLose")
 
+    
 screen passwordGame():
     frame:
         xalign 0.5 ypos 50

@@ -261,7 +261,8 @@ label findKey:
 label departure:
     scene bg_parade_car_turned_seats:
         zoom 0.5
-
+    play sound "/audio/door_closing.mp3"
+    play music "/audio/train_roule.mp3"
     "Sc 03, Departure"
 
     jump parade
@@ -305,6 +306,7 @@ label bar:
 
 #Sc 06
 label bug:
+    play music "/audio/alerte01.mp3"
 
     show animation_alerte:
     #scene in animation:
@@ -347,7 +349,11 @@ label crazybot:
     hide servicerobot_karen_broken with moveoutbottom
     pause
 
+
 label returnnormal:
+    stop music fadeout 1.0
+    play music "/audio/train_roule.mp3"
+
     scene bg_parade_car with dissolve:
         zoom 0.5
 
@@ -363,5 +369,5 @@ label returnnormal:
     "let's go to the kitchen"
 
 
-
+    stop music fadeout 1.0
     jump enterKitchen #kitchen.rpy
