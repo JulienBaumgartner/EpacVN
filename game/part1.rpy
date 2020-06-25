@@ -360,8 +360,7 @@ label returnnormal:
     scene bg_parade_car with dissolve:
         zoom 0.5
 
-    show room-deactivated_onlyrobots:
-        zoom 0.5
+    show room-deactivated_onlyrobots
 
     "all robots drops"
 

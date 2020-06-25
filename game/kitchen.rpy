@@ -61,9 +61,10 @@ label inspectAiDoor:
 label searchAiDoorKey:
     "Sc 13.4, you don't have the key."
     "The key is in the parade car."
-    jump startstoragegame # storagegame.rpy
+    jump startkeygame # searchTheKeyGame.rpy
 
 #Sc 13.5
 label openAiDoor:
+    scene bg_kitchen_door_opened
     "Sc 13.5, the door is open"
     jump enterAIroom #AIcar.rpy
