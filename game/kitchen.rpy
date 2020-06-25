@@ -28,7 +28,7 @@ label kitchencar:
     "Old tourist group dead"
     play sound "/audio/porte01.mp3"
     "locked inside"
-    scene bg_kitchen_mdp
+    scene bg_kitchen_door_back
     jump startpasswordgame #mastermind.rpy
 
 #Sc 13
@@ -48,7 +48,7 @@ label badBrotherRevealDoor:
 
 #Sc 13.2 / 13.3
 label inspectAiDoor:
-    scene bg_kitchen_door_opened
+    scene bg_kitchen_cardpass
     if hasAiKey:
         show cardchip with moveinright:
                 yalign 0.6
@@ -65,6 +65,8 @@ label searchAiDoorKey:
 
 #Sc 13.5
 label openAiDoor:
-    scene bg_kitchen_door_opened
-    "Sc 13.5, the door is open"
+    scene bg_kitchen_cardpass
+    "Sc 13.5, you can open the door"
+    scene bg_kitchen_dooropen
+    "the door is open"
     jump enterAIroom #AIcar.rpy

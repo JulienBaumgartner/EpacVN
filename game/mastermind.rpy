@@ -35,19 +35,17 @@ init python:
             elif badPasswords == 10:
                 renpy.jump("passwordGameLose")
 
-    
+
 screen passwordGame():
     frame:
-        xalign 0.5 ypos 50
+        xpos 880 ypos 415
         xpadding 10
         ypadding 10
+        background Solid("#00000000")
 
         vbox:
-            spacing 10
+            spacing 4
             xalign 0.5
-
-            text "Enter the password: ":
-                xalign 0.5
 
             hbox:
                 spacing 10
@@ -147,6 +145,7 @@ label passwordMistakes2:
 label passwordGameWin:
     hide screen passwordGame
     hide screen passwordTuto
+    scene bg_kitchen_door_back_open
     play sound "/audio/porte01.mp3"
     "Success, you leave the kitchen car."
     $ escapeKitchenCar = True
