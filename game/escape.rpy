@@ -44,13 +44,14 @@ screen screenEscapeGame():
 
     frame:
         xalign 0.0 ypos 50
-        xsize 590
+        xsize 601 ysize 443
+        background "uibackground"
 
         vbox:
             spacing 10
             $ doorUnlocked = True
             hbox:
-                spacing 10
+                spacing 25
                 bar value ScreenVariableValue("currentval1", 30) style "slider" xsize 500 yalign 0.5
                 if currentval1 == val1:
                     add "escape_unlock.png"
@@ -59,7 +60,7 @@ screen screenEscapeGame():
                     $ doorUnlocked = False
 
             hbox:
-                spacing 10
+                spacing 25
                 bar value ScreenVariableValue("currentval2", 30) style "slider" xsize 500 yalign 0.5
                 if currentval2 == val2:
                     add "escape_unlock.png"
@@ -68,7 +69,7 @@ screen screenEscapeGame():
                     $ doorUnlocked = False
 
             hbox:
-                spacing 10
+                spacing 25
                 bar value ScreenVariableValue("currentval3", 30) style "slider" xsize 500 yalign 0.5
                 if currentval3 == val3:
                     add "escape_unlock.png"
@@ -77,7 +78,7 @@ screen screenEscapeGame():
                     $ doorUnlocked = False
 
             hbox:
-                spacing 10
+                spacing 25
                 bar value ScreenVariableValue("currentval4", 30) style "slider" xsize 500 yalign 0.5
                 if currentval4 == val4:
                     add "escape_unlock.png"
@@ -86,7 +87,7 @@ screen screenEscapeGame():
                     $ doorUnlocked = False
 
             hbox:
-                spacing 10
+                spacing 25
                 bar value ScreenVariableValue("currentval5", 30) style "slider" xsize 500 yalign 0.5
                 if currentval5 == val5:
                     add "escape_unlock.png"
@@ -100,6 +101,7 @@ screen screenEscapeGame():
                     action Jump("escapewin")
                 text _("Unlock") style "button_text"
                 xalign 0.5
+                top_margin 10
 
 
 transform smoke_move:
