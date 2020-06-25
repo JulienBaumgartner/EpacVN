@@ -7,7 +7,7 @@ label brochure:
     scene bg brochure
     "Sc 01, tourist advert brochure"
 
-    #Test for Sharon pose, to delete later
+    #Test for poses, to delete later
     show sharon normal at right with moveinright
     "sharon normal.png"
     show sharon angry
@@ -15,6 +15,50 @@ label brochure:
     show sharon surprised
     "sharon surprised.png"
     hide sharon with moveoutright
+
+    show derek normal at right with moveinright
+    "derek normal.png"
+    show derek angry
+    "derek angry.png"
+    show derek happy
+    "derek happy.png"
+    show derek scared
+    "derek scared.png"
+    hide derek with moveoutright
+
+    show hans normal at right with moveinright
+    "hans normal.png"
+    show hans angry
+    "hans angry.png"
+    show hans curious
+    "hans curious.png"
+    hide hans with moveoutright
+
+    show kvin normal at right with moveinright
+    "kvin normal.png"
+    show kvin angry
+    "kvin angry.png"
+    show kvin happy
+    "kvin happy.png"
+    show kvin scared
+    "kvin scared.png"
+    hide kvin with moveoutright
+
+    show lin normal at right with moveinright
+    "lin normal.png"
+    show lin angry
+    "lin angry.png"
+    show lin surprised
+    "lin surprised.png"
+    hide lin with moveoutright
+
+    show neonila normal at right with moveinright
+    "neonila normal.png"
+    show neonila angry
+    "neonila angry.png"
+    show neonila surprised
+    "neonila surprised.png"
+    hide neonila with moveoutright
 
     jump sitting
 
@@ -146,7 +190,9 @@ label sitting:
     show derek at center:
         xzoom -1
         yalign 1.0
-    show sharon normal at right
+    show sharon normal:
+        xalign 0.95
+        yalign 1.0
     with move
 
     sharon "Sorry to interrupt your worthless and pathetic conversation, {b}dear{/b} husband, but may I remind you that you are carrying my makeup station, and it’s already been 30 minutes?"
@@ -220,9 +266,7 @@ label findKey:
         "Take the card":
             $ hasAiKey = True
 
-            show kvin happy:
-                zoom 0.3
-                #xalign 0.3
+            show kvin happy
             kvin "No way I’m gonna pass up on this! Card’s mine! Hehe!"
 
             show kvin:
