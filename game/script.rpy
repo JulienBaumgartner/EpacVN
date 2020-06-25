@@ -74,9 +74,28 @@ init -1 python:
                 #renpy.show(char + " " + str_tags, at_list=[talking])
             store.speaking_char = char
 
+
+image white = "#ffffff"
+label splashscreen:
+    scene white
+    $ renpy.pause(1, hard=True)
+
+    show logo:
+        xalign 0.5
+        yalign 0.5
+    with dissolve
+    $ renpy.pause(2, hard=True)
+
+
+
+    hide logo with dissolve
+    $ renpy.pause(0.5, hard=True)
+
+    return
+
 label start:
 
-    scene bg brochure
+    scene bg brochure with dissolve
 
     jump initVariables
 
