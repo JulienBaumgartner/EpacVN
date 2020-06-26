@@ -1,5 +1,14 @@
 # Steal AI minigame ( Sc 11.2 / 12.2)
 
+screen chipbot_goodbrother():
+    imagebutton:
+        yalign 0.5
+        xalign 0.5
+        idle "chipbot"
+        focus_mask True 
+
+        action Jump("endStealAIGoodBrotherGame")
+
 label initStealAIGoodBrother:
     $ charactersList = {
         "kvin": { "distract" : 25, "thief" : 70 },
@@ -452,11 +461,7 @@ label distractRobotGoodBrother:
         hide kais with moveouttop
         thiefName "I have the chip!"
 
-        hide chipbot with moveoutbottom
-
-        $ takeGoodBrotherAI = True
-
-        jump badBrotherRevealDoor # kitchen.rpy
+        call screen chipbot_goodbrother
     else:
         show thiefChr at right
         show kais crazy:
@@ -470,3 +475,10 @@ label distractRobotGoodBrother:
         if failBadBrotherSteal:
             jump gameover1 # gameovers.rpy
     jump explorationMap # explorationMap.rpy
+
+label endStealAIGoodBrotherGame:
+    hide chipbot with moveoutbottom
+
+    $ takeGoodBrotherAI = True
+
+    jump badBrotherRevealDoor # kitchen.rpy
