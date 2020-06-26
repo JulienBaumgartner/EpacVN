@@ -21,7 +21,9 @@ label stealAIBadBrother:
     show derek normal at right with moveinright
     derek "So, how are we going to take this AI?"
 
-    show kvin normal at left with moveinleft
+    show kvin normal at left with moveinleft:
+        xzoom -1
+        yalign 1.0
     kvin "The other robot said his AI is stored on a chip behind his back!"
 
     hide derek with moveoutright
@@ -37,7 +39,9 @@ label stealAIBadBrother:
     neonila "We just have to distract him and it's good!"
 
     hide lin with moveoutleft
-    show sharon normal at left with moveinleft
+    show sharon normal at left with moveinleft:
+        xzoom -1
+        yalign 1.0
     sharon "We have to choose who will steal the chip, someone discreet will be more efficient."
 
     hide neonila
@@ -228,10 +232,7 @@ label startStealGameBadBrother:
 
     scene bg_storage:
         zoom 0.5
-    show kais_storage_normal with moveintop:
-        xalign 0.5
-        zoom 0.5
-        #zorder 10
+    show kais_storage normal at topcenter zorder 10 with moveintop
     show thiefChr:
         xalign thiefX
         yalign 1.0
@@ -249,7 +250,9 @@ define moveThief = { "master" : MoveTransition(0.5) }
 
 label distractRobotBadBrother:
     if distractTeam[distractIndex][0] == derek:
-        show derek normal at left with moveinleft
+        show derek normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -259,7 +262,7 @@ label distractRobotBadBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "A war? Nobody attacked us!"
+        badbrother "A war? Nobody attacked us!"
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -269,7 +272,7 @@ label distractRobotBadBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "The security system is fully operational, I don't need your advice."
+        badbrother "The security system is fully operational, I don't need your advice."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -277,7 +280,9 @@ label distractRobotBadBrother:
         derek "All right, but you shouldn't complain if you lose the war..."
         hide derek with moveoutleft
     elif distractTeam[distractIndex][0] == lin:
-        show lin normal at left with moveinleft
+        show lin normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -287,7 +292,7 @@ label distractRobotBadBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "No, this storage is not for you."
+        badbrother "No, this storage is not for you."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -297,7 +302,7 @@ label distractRobotBadBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "Enough! I will not help you!"
+        badbrother "Enough! I will not help you!"
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -305,7 +310,9 @@ label distractRobotBadBrother:
         lin "I will not insist, sorry for the inconvenience."
         hide lin with moveoutleft
     elif distractTeam[distractIndex][0] == kvin:
-        show kvin normal at left with moveinleft
+        show kvin normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -315,7 +322,7 @@ label distractRobotBadBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "I take care of the inventory of our spare parts and I store them in this room."
+        badbrother "I take care of the inventory of our spare parts and I store them in this room."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -325,7 +332,7 @@ label distractRobotBadBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "I don't have time to answer you kid, leave me alone."
+        badbrother "I don't have time to answer you kid, leave me alone."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -333,7 +340,9 @@ label distractRobotBadBrother:
         kvin "Okay..."
         hide kvin with moveoutleft
     elif distractTeam[distractIndex][0] == hans:
-        show hans normal at left with moveinleft
+        show hans normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -343,7 +352,7 @@ label distractRobotBadBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "A reptilian? What are you talking about?"
+        badbrother "A reptilian? What are you talking about?"
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -353,7 +362,7 @@ label distractRobotBadBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "You are just crazy, get out of here."
+        badbrother "You are just crazy, get out of here."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -361,7 +370,9 @@ label distractRobotBadBrother:
         hans "Did I piss off the reptilians? I better leave..."
         hide hans with moveoutleft
     elif distractTeam[distractIndex][0] == sharon:
-        show sharon normal at left with moveinleft
+        show sharon normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -371,7 +382,7 @@ label distractRobotBadBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "I don't know what you mean, everything is as usual."
+        badbrother "I don't know what you mean, everything is as usual."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -381,7 +392,7 @@ label distractRobotBadBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "I said that everything is as usual, if you have nothing else to say, go away."
+        badbrother "I said that everything is as usual, if you have nothing else to say, go away."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -389,7 +400,9 @@ label distractRobotBadBrother:
         sharon "It will not happen like that, I will file a complaint."
         hide sharon with moveoutleft
     elif distractTeam[distractIndex][0] == neonila:
-        show neonila normal at left with moveinleft
+        show neonila normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -399,7 +412,7 @@ label distractRobotBadBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "Hey you! Filming here is not allowed, stop it."
+        badbrother "Hey you! Filming here is not allowed, stop it."
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -409,7 +422,7 @@ label distractRobotBadBrother:
             xalign thiefX yalign 1.0
         with moveThief
         $ thiefX = thiefX - thiefSpeed
-        stwin "Stop it right now if you wanna leave alive!"
+        badbrother "Stop it right now if you wanna leave alive!"
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -423,26 +436,23 @@ label distractRobotBadBrother:
         jump distractRobotBadBrother
 
     if thiefScore <= distractScore:
-        hide kais_storage_normal
         stop music fadeout 1.0
-        show kais_storage_deactivated:
-            zoom 0.5
-            xalign 0.5
+        show kais_storage deactivated
         play sound "/audio/robot_power_off.mp3"
-        stwin "{i}[[Error: AI chip missing. System shutdown...]{/i}"
+        badbrother "{i}[[Error: AI chip missing. System shutdown...]{/i}"
         show thiefChr at right with move
         thiefName "I have the chip!"
         $ takeBadBrotherAI = True
         jump goodBrotherRevealDoor #kitchen.rpy
     else:
         show thiefChr at right
-        show stwin:
+        show kais_storage angry:
             xalign 0.4
             yalign 0.0
         with move
-        stwin "Hey! You! What are you doing?!?"
+        badbrother "Hey! You! What are you doing?!?"
         thiefName "I ..."
-        stwin "Get out of here!"
+        badbrother "Get out of here!"
         $ failBadBrotherSteal = True
         if failGoodBrotherSteal:
             jump gameover1 # gameovers.rpy

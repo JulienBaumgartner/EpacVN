@@ -60,6 +60,29 @@ label brochure:
     "neonila surprised.png"
     hide neonila with moveoutright
 
+
+    show kais normal at topcenter with moveintop
+    "kais normal.png"
+    show kais crazy
+    "kais crazy.png"
+    show kais deactivated
+    "kais deactivated.png"
+    show kais happy
+    "kais happy.png"
+    show kais sad
+    "kais sad.png"
+    show kais shocked
+    "kais shocked.png"
+    hide kais with moveouttop
+
+    show kais_storage normal at topcenter with moveintop
+    "kais_storage normal.png"
+    show kais_storage angry
+    "kais_storage angry.png"
+    show kais_storage deactivated
+    "kais_storage deactivated.png"
+    hide kais_storage with moveouttop
+
     jump sitting
 
 #Sc 02
@@ -124,8 +147,7 @@ label sitting:
 
     play music "/audio/train_01.mp3" fadein 1.0
 
-    show servicerobot_karen normal with moveinleft:
-        zoom 0.5
+    show servicerobot_karen normal at center with moveinleft:
 
     service1 "hello"
     service1 "texte intro bienvenue"
@@ -136,8 +158,8 @@ label sitting:
 
 
     kvin "Wooow! Me first me first!"
-    show charles_normal :
-            yalign 0.6
+    show charles normal :
+            yalign 0.5
             xalign 0.5
 
     play sound "/audio/smalldogbark.mp3"
@@ -159,7 +181,7 @@ label sitting:
     kvin "ooookeeey... weird girl... well let’s get somewhere el- OH HOW MANY CAMERAS DOES THIS GUY HAVE??"
 
     hide neonila with moveoutleft
-    hide charles_normal with moveoutleft
+    hide charles with moveoutleft
     show lin normal at left with moveinleft
 
 
@@ -281,17 +303,15 @@ label findKey:
 
             hide kvin with moveoutright
 
-            show servicerobot_karen normal with moveinright:
-                zoom 0.5
-                xalign 0.9
+            show servicerobot_karen normal at right with moveinright
 
             service1 "hi thank you"
 
             hide cardchip
 
-            hide servicerobot_karen normal with moveoutright
+            hide servicerobot_karen with moveoutright
 
-            show kvin normal with moveinright
+            show kvin normal at right with moveinright
 
             kvin "Oooh cmon you’re not fun… but where were we? Oh yeah i gotta take a look at those cameras!"
 
@@ -340,8 +360,7 @@ label bar:
     scene bg_bar:
         zoom 0.5
 
-    show kais_normal with moveinright:
-        zoom 0.4
+    show kais normal at topcenter with moveinright
 
 
     goodbrother "Welcome customers"
@@ -359,11 +378,11 @@ label bug:
     "bug"
     "description du bug"
     play sound "/audio/crash_dog.mp3"
-    show charles_broken with vpunch:
+    show charles broken with vpunch:
         yalign 0.7
         xalign 0.5
     "crack"
-    hide charles_broken
+    hide charles
 
 #Sc 07
 label crazybot:
@@ -379,21 +398,18 @@ label crazybot:
 
     hide nr_cara_guggen_crazy with moveoutbottom
 
-    show servicerobot_karen normal with moveinright:
-        zoom 0.5
+    show servicerobot_karen normal at center with moveinright
     service1 "are you ok"
 
-    hide servicerobot_karen normal
     play sound "audio/robot_glitch02.mp3"
-    show servicerobot_karen_broken with vpunch:
+    show servicerobot_karen broken with vpunch:
         zoom 0.5
 
     service1 "jump on you"
-    hide servicerobot_karen_broken
-    show servicerobot_karen_broken:
-        yalign 0.01 xalign 0.5
+    show servicerobot_karen:
+        yalign 0.01 xalign 0.5 zoom 1.0
     pause
-    hide servicerobot_karen_broken with moveoutbottom
+    hide servicerobot_karen with moveoutbottom
     pause
 
 

@@ -20,7 +20,9 @@ label stealAIGoodBrother:
     show derek normal at right with moveinright
     derek "So, how are we going to take this AI?"
 
-    show kvin normal at left with moveinleft
+    show kvin normal at left with moveinleft:
+        xzoom -1
+        yalign 1.0
     kvin "The other robot said his AI is stored on a chip behind his back!"
 
     hide derek with moveoutright
@@ -36,7 +38,9 @@ label stealAIGoodBrother:
     neonila "We just have to distract him and it's good!"
 
     hide lin with moveoutleft
-    show sharon normal at left with moveinleft
+    show sharon normal at left with moveinleft:
+        xzoom -1
+        yalign 1.0
     sharon "We have to choose who will steal the chip, someone discreet will be more efficient."
 
     hide neonila
@@ -231,8 +235,7 @@ label startStealGameGoodBrother:
 
     scene bg_bar:
         zoom 0.5
-    show kais_sad at topcenter zorder 10:
-        zoom 0.5
+    show kais sad at topcenter zorder 10
     show thiefChr:
         xalign thiefX
         yalign 1.0
@@ -250,7 +253,9 @@ define moveThief = { "master" : MoveTransition(0.5) }
 
 label distractRobotGoodBrother:
     if distractTeam[distractIndex][0] == derek:
-        show derek normal at left with moveinleft
+        show derek normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -278,7 +283,9 @@ label distractRobotGoodBrother:
         derek "All right, but you shouldn't complain if you lose the war..."
         hide derek with moveoutleft
     elif distractTeam[distractIndex][0] == lin:
-        show lin normal at left with moveinleft
+        show lin normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -306,7 +313,9 @@ label distractRobotGoodBrother:
         lin "I will not insist, sorry for the inconvenience."
         hide lin with moveoutleft
     elif distractTeam[distractIndex][0] == kvin:
-        show kvin normal at left with moveinleft
+        show kvin normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -334,7 +343,9 @@ label distractRobotGoodBrother:
         kvin "Okay..."
         hide kvin with moveoutleft
     elif distractTeam[distractIndex][0] == hans:
-        show hans normal at left with moveinleft
+        show hans normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -362,7 +373,9 @@ label distractRobotGoodBrother:
         hans "Did I piss off the reptilians? I better leave..."
         hide hans with moveoutleft
     elif distractTeam[distractIndex][0] == sharon:
-        show sharon normal at left with moveinleft
+        show sharon normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -390,7 +403,9 @@ label distractRobotGoodBrother:
         sharon "It will not happen like that, I will file a complaint."
         hide sharon with moveoutleft
     elif distractTeam[distractIndex][0] == neonila:
-        show neonila normal at left with moveinleft
+        show neonila normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
         show thiefChr:
             xalign thiefX yalign 1.0
         with moveThief
@@ -424,23 +439,17 @@ label distractRobotGoodBrother:
         jump distractRobotGoodBrother
 
     if thiefScore <= distractScore:
-        hide kais_sad
         stop music fadeout 1.0
-        show kais_deactivated:
-            zoom 0.5
-            xalign 0.5
+        show kais deactivated
         play sound "/audio/robot_power_off.mp3"
         goodbrother "{i}[[Error: AI chip missing. System shutdown...]{/i}"
-
-        hide kais_sad
-        show kais_deactivated:
-            zoom 0.5
 
         show chipbot with moveinbottom:
             yalign 0.5
             xalign 0.5
 
         show thiefChr at right with move
+        hide kais with moveouttop
         thiefName "I have the chip!"
 
         hide chipbot with moveoutbottom
@@ -449,9 +458,8 @@ label distractRobotGoodBrother:
 
         jump badBrotherRevealDoor # kitchen.rpy
     else:
-        show distractChr at outLeft
         show thiefChr at right
-        show goodbrother:
+        show kais crazy:
             xalign 0.4
             yalign 0.0
         with move

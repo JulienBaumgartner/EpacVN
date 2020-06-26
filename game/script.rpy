@@ -6,7 +6,6 @@ define lin = Character("Lin", color="efd693", callback=partial(char_talking, "li
 define hans = Character("Hans", color="b06560", callback=partial(char_talking, "hans"))
 define sharon = Character("Sharon", color="46456b", callback=partial(char_talking, "sharon"))
 define derek = Character("Derek", color="c2bfa6", callback=partial(char_talking, "derek"))
-define stwin = Character("Twin", callback=partial(char_talking, "stwin"))
 define service1 = Character("Service Bot", callback=partial(char_talking, "servicerobot_karen"), who_font="font/Syncopate-Bold.ttf")
 define goodbrother = Character("Bar Bot", callback=partial(char_talking, "Bar Bot"), who_font="font/Syncopate-Bold.ttf")
 define badbrother = Character("kais_storage", callback=partial(char_talking, "Storage Bot"), who_font="font/Syncopate-Bold.ttf")

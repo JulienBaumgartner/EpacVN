@@ -17,8 +17,7 @@ label enterBar:
 
 #Sc 08.2
 label firstBar:
-    show kais_normal with moveinright:
-        zoom 0.4
+    show kais normal at topcenter with moveintop
     "First enter in the bar"
     $ firstEnterBar = False
     jump goodBrotherActions
@@ -26,8 +25,7 @@ label firstBar:
 
 
 label goodBrotherActions:
-    show kais_normal with moveinright:
-        zoom 0.4
+    show kais normal at topcenter with moveintop
 
     if badBrotherAskHelp and not takeBadBrotherAI:
         menu:
