@@ -333,7 +333,7 @@ label departure:
     neonila "Wow just look at this scenery, I can’t even feel the train moving!"
     show neonila normal at right
     neonila "Of course, you’d feel it better if I had the last generation streaming camera, but for that I’ll need your help!"
-    #neonila "Remember, I only take 95% of your donation for my daily expenses, so EVERYTHING ELSE goes straight to my material budget, just for your comfort! Crazy, right?!"
+    neonila "Remember, I only take 95\% of your donation for my daily expenses, so EVERYTHING ELSE goes straight to my material budget, just for your comfort! Crazy, right?!"
     neonila "Alright, I see we have a menu for drinks here, let’s make a vote on what I should order! "
     hide neonila with moveoutright
 
@@ -353,22 +353,86 @@ label departure:
 
 #Sc 04
 label parade:
+
+    play music "audio/katy_edit_loop.mp3" fadein 2.0
+
+    show derek scared at left with moveinleft:
+        xzoom-1
+    derek "Hm? What’s that noise approaching us?"
+
+
+    show servicerobot_karen normal  at right  with moveinbottom:
+
+    service1 "We hope everyone is having a great time on this tour through Switzerland!"
+    service1 "Edelweiss Corporation offers you this completely historically accurate traditional parade that was celebrated everywhere in this country no later than 40 years before our time!"
+    service1 "Trust us, we know what we’re talking about!"
+    service1 "Now, time to stop the talking and start the fun!"
+    hide servicerobot_karen with moveoutbottom
+
+
     scene bg_parade_car_confetti:
         zoom 0.5
-    play music "audio/katy_edit_loop.mp3" fadein 0.5
+
+    show derek scared at left :
+        xzoom-1
+    derek "WE’RE UNDER ATTACK! EVERYONE, GET DO-"
+
+    show sharon normal at right with moveinright
+    sharon " NO! No no no! It’s just a nice parade! You won’t ruin the only thing that looks interesting on this trip! Now you will sit down and let me enjoy it!   "
+
+    show derek normal at left
+    derek " Oh…I…I’ll just keep an eye on it I guess…"
+    hide derek with moveoutleft
+    hide sharon with moveoutright
 
     show nr_cara_guggen:
+        zoom 0.1
+        xalign 0.5
+        yalign 0.3
+        easein 10.0 xalign 0.5 zoom 0.3
+    pause
+
+    hide nr_cara_guggen with moveoutbottom
+
+    show kvin happy at right with moveinright
+    kvin " Waah that’s totally wicked! There’s robots everywhere! And costumes! And confettis! And and…oh, I gotta get closer!"
+    hide kvin with moveoutright
+
+
+
+
+    show carnabot:
         zoom 0.2
         xalign 0.5
+        yalign 0.4
         easein 5.0 xalign 0.5 zoom 0.5
-    "Sc 04, Parade"
+    pause
+    hide carnabot with moveoutbottom
+
+    show lin surprised at left with moveinleft:
+        xzoom -1
+    lin " Wait what? No, my cameras aren’t set up for that yet! Too fast! Could you start over please?"
+    hide lin with moveoutleft
 
     show nr_cara_guggen:
-        zoom 0.2
+        zoom 0.1
         xalign 0.5
-        easein 5.0 xalign 0.5 zoom 0.5
+        yalign 0.3
+        easein 10.0 xalign 0.5 zoom 0.3
+    pause
 
-    "carnabots"
+    show neonila surprised at right with moveinright
+    neonila "Hey chat look at this! Wait, this is premium content, I’m turning off the camera for everyone who isn’t subbed!"
+    neonila "Now I hope you’ll enjoy it while I take a sip of my much earned drink! Seriously, I should get paid more for the quality I bring you."
+
+    show hans angry at left with moveinleft:
+        xzoom -1
+    hans  "Ok…I’ll admit they look cool…they’re slowly invading the place and blocking the exit, but they do look cool…just stay calm and rush to the exit if anything were to happen… "
+    hans "Let’s move slowly to the back, where I won't actually be safer, but will at least feel like I am."
+
+    hide hans
+    hide neonila
+
 
     stop music fadeout 1.0
 
