@@ -329,6 +329,26 @@ label departure:
     play music "/audio/train_roule.mp3" fadein 0.5
     "Sc 03, Departure"
 
+    show neonila surprised with moveinright
+    neonila "Wow just look at this scenery, I can’t even feel the train moving!"
+    show neonila normal at right
+    neonila "Of course, you’d feel it better if I had the last generation streaming camera, but for that I’ll need your help!"
+    #neonila "Remember, I only take 95% of your donation for my daily expenses, so EVERYTHING ELSE goes straight to my material budget, just for your comfort! Crazy, right?!"
+    neonila "Alright, I see we have a menu for drinks here, let’s make a vote on what I should order! "
+    hide neonila with moveoutright
+
+    show hans normal with moveinleft
+    hans "This country is impressive though…there must be something going on, seeing at how clean the mountains are even after the war…"
+    show hans angry
+    hans "But wait! That girl…she’s russian I think? Did she just...order a drink? Is she crazy?? Who knows where that drink comes from, or if it’s gonna be poisoned or drugged?"
+    hans "But wait a minute…who is she speaking to all the time? Maybe she’s…just recording everything? To whoever is in control of this train?"
+    show hans curious
+    hans "And that guy with the cameras… He’s the eyes! This whole plan has been thoroughly thought through! I’m right where they wanted me to be!"
+    show hans normal
+    hans "No, no…stay calm...breath…everything’s gonna be ok…also take your medication. "
+    hans "If I ever get out of here alive, I promise I'll go see my mom one last time, and never go out of the house again."
+    hide hans with moveoutleft
+
     jump parade
 
 #Sc 04
