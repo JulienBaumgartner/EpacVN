@@ -370,8 +370,9 @@ label parade:
     hide servicerobot_karen with moveoutbottom
 
 
-    scene bg_parade_car_confetti:
-        zoom 0.5
+    #scene bg_parade_car_confetti:
+        #zoom 0.5
+    $ renpy.movie_cutscene("video/confettis01.webm")
 
     show derek scared at left :
         xzoom-1
