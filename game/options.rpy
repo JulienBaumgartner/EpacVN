@@ -6,6 +6,7 @@
 
 define config.rollback_enabled = True
 define config.default_music_volume = 0.2
+define config.autosave_on_choice = False
 
 ## Basics ######################################################################
 

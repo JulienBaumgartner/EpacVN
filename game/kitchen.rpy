@@ -29,6 +29,13 @@ label kitchencar:
     play sound "/audio/porte01.mp3"
     "locked inside"
     scene bg_kitchen_door_back
+
+    $ renpy.take_screenshot()
+    $ renpy.save(renpy.newest_slot(), "In the kitchen")
+    $ config.autosave_on_quit = False
+    $ _game_menu_screen = "preferences"
+    $ allowSave = False
+
     jump startpasswordgame #mastermind.rpy
 
 #Sc 13

@@ -2,19 +2,35 @@ label gameover1:
     scene bg_badend
 
     "Bad end 1"
-    return
+    menu:
+        "Reload save":
+            $ renpy.load("auto-1")
+        "Main menu":
+            return
 
 label gameover2:
     scene bg_badend
     "Bad end 2"
-    return
+    menu:
+        "Reload save":
+            $ renpy.load("auto-1")
+        "Main menu":
+            return
 
 label gameover3:
     scene bg_badend
     "Bad end 3"
-    return
+    menu:
+        "Reload save":
+            $ renpy.load("auto-1")
+        "Main menu":
+            return
 
 label gameover4:
     scene bg_badend
     "Bad end 4"
-    return
+    menu:
+        "Reload save":
+            $ renpy.load("auto-1")
+        "Main menu":
+            return

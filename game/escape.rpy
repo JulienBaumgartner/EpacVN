@@ -116,6 +116,12 @@ label escapegame:
     show hans normal:
         xalign 0.4 yalign 1.0
 
+    $ renpy.take_screenshot()
+    $ renpy.save(renpy.newest_slot(), "In the AI room")
+    $ config.autosave_on_quit = False
+    $ _game_menu_screen = "preferences"
+    $ allowSave = False
+
     call screen kitchenEscapeTuto
 
 
@@ -130,6 +136,10 @@ label escapewin:
     hide screen countdown
     hide stwin with moveoutright
 
+    $ config.autosave_on_quit = True
+    $ _game_menu_screen = "save"
+    $ allowSave = True
+
     if takeGoodBrotherAI:
         scene bg_ai_room_end
         "Sc 15.1.3, force exit"
@@ -143,6 +153,10 @@ label escapewin:
 
 
 label escapelose:
+    $ config.autosave_on_quit = True
+    $ _game_menu_screen = "save"
+    $ allowSave = True
+
     if takeGoodBrotherAI:
         jump gameover2 # gameovers.rpy
     jump gameover3 # gameovers.rpy

@@ -7,8 +7,8 @@ define hans = Character("Hans", color="b06560", callback=partial(char_talking, "
 define sharon = Character("Sharon", color="46456b", callback=partial(char_talking, "sharon"))
 define derek = Character("Derek", color="c2bfa6", callback=partial(char_talking, "derek"))
 define service1 = Character("Service Bot", callback=partial(char_talking, "servicerobot_karen"), who_font="font/Syncopate-Bold.ttf")
-define goodbrother = Character("Bar Bot", callback=partial(char_talking, "Bar Bot"), who_font="font/Syncopate-Bold.ttf")
-define badbrother = Character("kais_storage", callback=partial(char_talking, "Storage Bot"), who_font="font/Syncopate-Bold.ttf")
+define goodbrother = Character("Bar Bot", callback=partial(char_talking, "kais"), who_font="font/Syncopate-Bold.ttf")
+define badbrother = Character("kais_storage", callback=partial(char_talking, "kais_storage"), who_font="font/Syncopate-Bold.ttf")
 define carnabot = Character("Carnabot", callback=partial(char_talking, "Carnabot"), who_font="font/Syncopate-Bold.ttf")
 
 #Effects
@@ -64,13 +64,13 @@ init -1 python:
                 str_tags = " "
                 if tags != None:
                     str_tags = " ".join(tags)
-                #renpy.show(store.speaking_char + " " + str_tags, at_list=[stopTalking])
+                renpy.show(store.speaking_char + " " + str_tags, at_list=[stopTalking])
             if char != None and renpy.showing(char):
                 tags = renpy.get_attributes(char)
                 str_tags = " "
                 if tags != None:
                     str_tags = " ".join(tags)
-                #renpy.show(char + " " + str_tags, at_list=[talking])
+                renpy.show(char + " " + str_tags, at_list=[talking])
             store.speaking_char = char
 
 
@@ -100,6 +100,7 @@ label start:
 
 #Init the variables
 label initVariables:
+    $ allowSave = True
 
     $ hasAiKey = False
 
@@ -116,5 +117,6 @@ label initVariables:
     $ badBrotherAskHelp = False
     $ takeBadBrotherAI = False
     $ failBadBrotherSteal = False
+
 
     jump brochure #part1.rpy

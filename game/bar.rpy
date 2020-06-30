@@ -25,21 +25,30 @@ label firstBar:
 
 
 label goodBrotherActions:
-    show kais normal at topcenter with moveintop
+    if failGoodBrotherSteal:
+        show kais crazy at topcenter with moveintop
+        goodbrother "It's you again? Pay attention, I'm watching you."
+    else:
+        show kais normal at topcenter with moveintop
 
     if badBrotherAskHelp and not takeBadBrotherAI:
+        $ renpy.take_screenshot()
+        $ renpy.save(renpy.newest_slot(), "In the bar")
         menu:
             "What do you want to do with the good brother?"
 
             "Discuss":
                 jump discussGoodBrother
-            "Take AI":
+            "Take AI" if not failGoodBrotherSteal:
                 jump takeAIGoodBrother
+            "Explore" if failGoodBrotherSteal:
+                jump explorationMap
 
     jump discussGoodBrother
 
 
 label discussGoodBrother:
+    show kais normal
     if not goodBrotherAskHelp:
 
         goodbrother "Good brother request: take bad brother AI"
@@ -47,7 +56,7 @@ label discussGoodBrother:
     else:
         "You don't have the bad brother AI"
 
-    if badBrotherAskHelp:
+    if badBrotherAskHelp and not failGoodBrotherSteal:
         menu:
             "Explore":
                 stop music fadeout 1.0
@@ -58,4 +67,7 @@ label discussGoodBrother:
 
 #Sc 11
 label takeAIGoodBrother:
+    $ config.autosave_on_quit = False
+    $ _game_menu_screen = "preferences"
+    $ allowSave = False
     jump initStealAIGoodBrother #stealAIGoodBrother.rpy

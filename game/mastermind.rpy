@@ -147,6 +147,11 @@ label passwordGameWin:
     hide screen passwordTuto
     scene bg_kitchen_door_back_open
     play sound "/audio/porte01.mp3"
+
+    $ config.autosave_on_quit = True
+    $ _game_menu_screen = "save"
+    $ allowSave = True
+
     "Success, you leave the kitchen car."
     $ escapeKitchenCar = True
     jump explorationMap # explorationMap.rpy
@@ -156,5 +161,9 @@ label passwordGameLose:
     hide screen passwordTuto
     scene bg_badend
     "you are dead"
+
+    $ config.autosave_on_quit = True
+    $ _game_menu_screen = "save"
+    $ allowSave = True
 
     jump gameover1 #gameovers.rpy

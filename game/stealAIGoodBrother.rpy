@@ -5,7 +5,7 @@ screen chipbot_goodbrother():
         yalign 0.5
         xalign 0.5
         idle "chipbot"
-        focus_mask True 
+        focus_mask True
 
         action Jump("endStealAIGoodBrotherGame")
 
@@ -447,18 +447,22 @@ label distractRobotGoodBrother:
         $ distractIndex = distractIndex + 1
         jump distractRobotGoodBrother
 
+    $ config.autosave_on_quit = True
+    $ _game_menu_screen = "save"
+    $ allowSave = True
+
     if thiefScore <= distractScore:
         stop music fadeout 1.0
         show kais deactivated
         play sound "/audio/robot_power_off.mp3"
         goodbrother "{i}[[Error: AI chip missing. System shutdown...]{/i}"
 
+        hide kais with moveouttop
         show chipbot with moveinbottom:
             yalign 0.5
             xalign 0.5
 
         show thiefChr at right with move
-        hide kais with moveouttop
         thiefName "I have the chip!"
 
         call screen chipbot_goodbrother

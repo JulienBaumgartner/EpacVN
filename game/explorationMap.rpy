@@ -7,8 +7,8 @@ label explorationMap:
     menu:
         "Exploration choices"
 
-        "Storage car" if not takeBadBrotherAI and not failBadBrotherSteal :
+        "Storage car" if not takeBadBrotherAI:
             jump enterStorage #storage.rpy
 
-        "Bar" if not takeGoodBrotherAI and not failGoodBrotherSteal:
+        "Bar" if not takeGoodBrotherAI:
             jump enterBar #bar.rpy
