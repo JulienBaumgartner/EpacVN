@@ -329,9 +329,9 @@ label departure:
     play music "/audio/train_roule.mp3" fadein 0.5
     "Sc 03, Departure"
 
-    show neonila surprised with moveinright
+    show neonila surprised at center with moveinright
     neonila "Wow just look at this scenery, I can’t even feel the train moving!"
-    show neonila normal at right
+    show neonila normal
     neonila "Of course, you’d feel it better if I had the last generation streaming camera, but for that I’ll need your help!"
     neonila "Remember, I only take 95\% of your donation for my daily expenses, so EVERYTHING ELSE goes straight to my material budget, just for your comfort! Crazy, right?!"
     neonila "Alright, I see we have a menu for drinks here, let’s make a vote on what I should order! "
@@ -352,6 +352,7 @@ label departure:
     jump parade
 
 #Sc 04-------------------------------------------------------------------------------------------------------------------------------------
+image movie = Movie(size=(1920, 1080), xpos=0, ypos=0, xanchor=0, yanchor=0)
 label parade:
 
     play music "audio/katy_edit_loop.mp3" fadein 2.0
@@ -372,10 +373,9 @@ label parade:
 
     #scene bg_parade_car_confetti:
         #zoom 0.5
-    $ renpy.movie_cutscene("video/confettis01.webm")
-
-    show derek scared at left :
-        xzoom-1
+    #$ renpy.movie_cutscene("video/confettis01.webm")
+    play movie "video/confettis01.webm" loop
+    show movie behind derek
     derek "WE’RE UNDER ATTACK! EVERYONE, GET DO-"
 
     show sharon normal at right with moveinright
@@ -434,7 +434,8 @@ label parade:
     hide hans
     hide neonila
 
-
+    hide movie
+    stop movie
     stop music fadeout 1.0
 
     jump bar
