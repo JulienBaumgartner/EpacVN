@@ -449,8 +449,110 @@ label bar:
     show kais normal at topcenter with moveinright
 
 
-    goodbrother "Welcome customers"
+    goodbrother "Oh hello my good sir!"
+    goodbrother "Could I interest you in some traditional delicacies?"
+    goodbrother "Or maybe you’re hungry for more, in which case I can get you a delicious swiss meal... "
+    goodbrother "...fresh from the kitchen!"
+
+    show hans angry at right with moveinright
+    hans "GET BACK! I’M FLUENT IN OVER 6 MILLION FORMS OF KICKING YOUR ASS!"
+    goodbrother "Herm… Sir? I’m not sure if I am programmed to deal with this kind of situation…"
+    hans "DID YOU NOT HEAR ME? GET B- Oh wait. You… can’t actually move away from there, can you?"
+    show kais sad
+    goodbrother " I’m sorry Sir, but what you’re saying is quite offensive towards me…"
+    hans "Oh uh I’m…sorry I guess? So…what were you saying before this…embarrassing moment? "
+    hans "{i}to himself: Since when are those waiter bots so…emotional?{/i}"
+    goodbrother "Well since my code forces me to stay nice to you no matter the situation, I’ll repeat what I just said! No worries it is my job after all.  "
+    show kais normal  at topcenter
+    kais "My name is KAIS, your bartender on this incredible tour!"
+    kais "Now to make sure you understand this time:..."
+    show kais happy
+    kais "“Oh hello my good sir! "
+    kais "Could I interest you in some traditional delicacies? "
+    kais " Or maybe you’re hungry for more, in which case I can get you a delicious swiss meal..."
+    kais "... fresh from the kitchen!"
+    show hans curious
+    hans "{i}Oh my god, can I even refuse now?"
+    hans "{i}It could be poisoned, but can I really anger him by saying no?"
+    hans "{i}I would be suspicious if I didn’t accept it!"
+    hans "{i}Well…I hope all these years building poison immunity are going to pay off!{/i}"
+    show hans normal
+    hans "So… I’m going to take uuh… an “Assiette Valaisanne” If that’s ok with you?"
+    show kais normal
+    kais "Coming right up, my good sir! "
+
+    show kais happy
+    kais " Here it is, the best of what we can offer!"
+    kais "I hope you have a great meal, good sir, and if you’re thirsty you’ll notice a Fendant fountain on your right, feel free to take a glass!"
+    show hans curious
+    hans "Wait a fountain? Are you not supposed to be a waiter?"
+    show kais sad
+    kais "…It would seem that my creator forgot that I can’t move around,and put the glass too low for me to reach."
+    kais " Please do forgive me, kind sir, as my little problem seems to cause trouble for BOTH of us…"
+    hans "Ok I got it, I’ll just shut up and enjoy my food. "
+    hans "How does the situation look like in the rest of the train though? "
+
     stop music fadeout 1.0
+    scene bg_parade_car_turned_seats:
+        zoom 0.5
+    play music "audio/katy_edit_loop.mp3" fadein 2.0
+
+    show kvin normal at left with moveinleft
+    kvin "Wooohoo! Look, they’ve got a confetti bag under their cape!"
+    show sharon normal at right with moveinright
+    sharon "Kevin get back here this instant! Please ,darling, be useful for once and say something!"
+    show derek normal at right with moveinright
+    derek " Sorry, too busy studying the enemy's position."
+    hide kvin with moveoutleft
+    hide sharon with moveoutright
+    hide derek with moveoutright
+
+
+    play movie "video/confettis01.webm" loop
+    show movie behind neonila
+    show neonila normal at left with moveinright
+    neonila "*Sip* I sure hope you’re enjoying the view, and more so that you’re going to vote for me as the best streamer of the month!"
+
+
+    show hans normal at right with moveinright
+    hans "Yup, complete chaos."
+    stop music fadeout 1.0
+    hide movie
+    stop movie
+
+
+    scene bg_bar:
+        zoom 0.5
+    play music "/audio/bar_01.mp3"
+
+
+
+    show hans normal at right with moveinright
+    hans "Oh well, let’s taste this meal that’s in front of me… "
+    hans "Hey, this is actually pretty good!  "
+    hans "I didn’t expect something so simple to taste this good. And no poison either, the day’s going better."
+    hans "Wait! ...There’s something hard in the food!"
+    hans "Is…is it a pill?"
+    hans " I can’t let him see me spit it out!"
+    hans "Ok…easy there...turn around and-"
+
+    show ring  with moveintop :
+        yalign 0.2
+        xalign 0.5
+
+    show hans angry
+    hans "Wait no this is...a ring? "
+    hans "What’s it doing in there?"
+    hans " It looks dirty and…THIS was in my food?"
+    hans "Is it a warning?"
+    hans "I…I can’t act recklessly! Now I just hope nothing too bad happens…"
+
+
+
+
+
+
+
     jump bug
 
 #Sc 06-------------------------------------------------------------------------------------------------------------------------------------

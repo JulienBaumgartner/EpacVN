@@ -10,7 +10,7 @@ define service1 = Character("Service Bot", callback=partial(char_talking, "servi
 define goodbrother = Character("Bar Bot", callback=partial(char_talking, "kais"), who_font="font/Syncopate-Bold.ttf")
 define badbrother = Character("kais_storage", callback=partial(char_talking, "kais_storage"), who_font="font/Syncopate-Bold.ttf")
 define carnabot = Character("Carnabot", callback=partial(char_talking, "Carnabot"), who_font="font/Syncopate-Bold.ttf")
-
+define kais = Character("Kais", callback=partial(char_talking, "kais"), who_font="font/Syncopate-Bold.ttf")
 #Effects
 define flash = Fade(.25, 0.0, .25, color="#fff")
 
