@@ -497,9 +497,12 @@ label bar:
         zoom 0.5
     play music "audio/katy_edit_loop.mp3" fadein 2.0
 
-    show kvin normal at left with moveinleft
+    show kvin normal at left with moveinleft:
+        xzoom -1
     kvin "Wooohoo! Look, they’ve got a confetti bag under their cape!"
-    show sharon normal at right with moveinright
+    show sharon normal with moveinright:
+        xalign 0.5
+        yalign 1.0
     sharon "Kevin get back here this instant! Please ,darling, be useful for once and say something!"
     show derek normal at right with moveinright
     derek " Sorry, too busy studying the enemy's position."
@@ -516,6 +519,8 @@ label bar:
 
     show hans normal at right with moveinright
     hans "Yup, complete chaos."
+    hide hans with moveoutright
+    hide neonila
     stop music fadeout 1.0
     hide movie
     stop movie
@@ -536,6 +541,7 @@ label bar:
     hans " I can’t let him see me spit it out!"
     hans "Ok…easy there...turn around and-"
 
+# sc 5.03 find ring------------------------------------------------------------------
     show ring  with moveintop :
         yalign 0.2
         xalign 0.5
@@ -543,17 +549,53 @@ label bar:
     show hans angry
     hans "Wait no this is...a ring? "
     hans "What’s it doing in there?"
-    hans " It looks dirty and…THIS was in my food?"
+    hans "It looks dirty and…THIS was in my food?"
     hans "Is it a warning?"
     hans "I…I can’t act recklessly! Now I just hope nothing too bad happens…"
 
+    stop music fadeout 1.0
+    hide bar_01 with fade
+#-----------------------------------------------------------------------------------
+    play movie "video/confettis01.webm" loop
+    show movie behind derek with fade
+    play music "audio/katy_edit_loop.mp3"
+
+    show nr_cara_guggen:
+        zoom 0.1
+        xalign 0.5
+        yalign 0.3
+        easein 4.0 xalign 0.5 zoom 0.3
+    pause
+
+    show kvin happy at left with moveinleft
+
+    kvin "Waahaa! How did they stuff so much…stuff on these robots! Look grandma, they can do anything!"
+
+    show kvin happy:
+        xalign 0.5
+    with move
+    hide kvin
+
+    show sharon normal at right with moveinright
+    sharon "Yeah, I’m sure they can, and now get back here before you break something!"
+
+    sharon "Dear, could you look out for our grandson, and,"
+    sharon " I don’t know,"
+    sharon "put him on a leash or something before he ruins our already terrible vacation by breaking a robotic employee?"
+
+    show derek normal at left with moveinleft:
+        xzoom -1
+
+    derek "The…the robot got him and…his legs…we couldn’t find his legs!!"
+    sharon "Oh gosh, he seems pretty deep in his delirium this time."
+    kvin "No look for real! I swear I could just reach their-"
+
+    hide derek with moveoutleft
+    hide sharon with moveoutright
+    hide movie
+    stop movie
 
 
-
-
-
-
-    jump bug
 
 #Sc 06-------------------------------------------------------------------------------------------------------------------------------------
 label bug:
@@ -562,8 +604,13 @@ label bug:
     show animation_alerte:
     #scene in animation:
         zoom 0.5
+    with vpunch
+    show nr_cara_guggen_crazy:
+        yalign 0.5 xalign 0.5 zoom 0.6
 
-    "bug"
+
+
+
     "description du bug"
     play sound "/audio/crash_dog.mp3"
     show charles broken with vpunch:
