@@ -430,6 +430,7 @@ label parade:
         xzoom -1
     hans  "Ok…I’ll admit they look cool…they’re slowly invading the place and blocking the exit, but they do look cool…just stay calm and rush to the exit if anything were to happen… "
     hans "Let’s move slowly to the back, where I won't actually be safer, but will at least feel like I am."
+    hide hans with moveoutleft
 
     hide hans
     hide neonila
@@ -607,6 +608,116 @@ label bug:
     with vpunch
     show nr_cara_guggen_crazy:
         yalign 0.5 xalign 0.5 zoom 0.6
+
+
+    show sharon angry at right
+    sharon "....KEVIN!"
+    show kvin scared at left
+    kvin "Wha-? But I-"
+    hide sharon
+    hide kvin
+
+    show animation_alerte:
+    #scene in animation:
+        zoom 0.5
+    with vpunch
+
+
+    show lin surprised at right
+    lin "What’s going on? I can’t take picture in these conditions! "
+    show neonila surprised at left
+    neonila " He-hey, what’s happening? Chat what’s going on?"
+    neonila " …Chat??"
+    neonila "Oh god I can’t reach it! "
+    neonila "WHATAMIGONNADOICANTDOANYTHINGWITHOUTMYCHAT!"
+
+    hide neonila
+    hide lin
+
+    show animation_alerte:
+        #scene in animation:
+        zoom 0.5
+    with vpunch
+
+    show derek angry at left:
+        xzoom -1
+        yalign 1.0
+    derek "so…it begins again…come at me you damn human shaped cans! I’m not scared!"
+
+    hide derek
+
+    hide nr_cara_guggen_crazy with moveoutbottom
+
+    show hans angry
+    hans "hey…they’ve stopped working. All the robots are down."
+    hans "Something’s coming for me. I know it…"
+
+    show animation_alerte:
+            #scene in animation:
+        zoom 0.5
+    with vpunch
+
+    show kvin scared at left
+    kvin "uuh… I didn’t touch anything tho?"
+
+    hide Hans
+
+    show sharon angry at right
+    sharon "Sure young imbecile, and i guess those robots just fell down on their own!"
+
+    show servicerobot_karen normal at center with moveinbottom
+
+
+    kvin " No but for real this time, - hey look he’s getting up! See? Nothing bad happened!"
+    hide kvin
+    show hans curious at left
+    hans "one of them did get back up but… are you sure it’s not something bad happening? "
+    sharon "He’s right that robot doesn’t look good"
+    hide hans
+    show derek scared at left :
+        xzoom -1
+        yalign 1.0
+
+    derek "Here it comes"
+    sharon "Stop saying things like these you’ll actually start scaring me!"
+
+    service1 "..."
+
+    hide derek
+    show kvin scared at left
+    kvin "uuh.. Hello? Someone in there?"
+    service1 "..."
+
+    hide sharon
+
+    show neonila angry at right
+    neonila "OMG i can’t reach internet! "
+    neonila "Where’s my money going to come from if i can’t stream my day? "
+    neonila "Even my K-9 unit antenna can’t connect!"
+    neonila "Hey stupid robot how about you do something about it! "
+
+    service1 "..."
+
+    neonila "h- hey… what are you…?"
+
+    service1 "{b}Tentative to communicate to an unknown receptor in a quarantine situation detected{/b}"
+
+    neonila "M- my k9! Where are you taking him!"
+
+    service1 "{b}Removal of the threat in progress{/b}"
+
+    hide kvin
+    show derek scared at left :
+            xzoom -1
+            yalign 1.0
+    derek "GET DOWN!"
+
+    show servicerobot_karen broken with vpunch:
+        zoom 0.5
+
+    show neonila surprised
+    neonila "Haaa!"
+
 
 
 
