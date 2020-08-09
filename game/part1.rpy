@@ -136,6 +136,7 @@ label sitting:
     derek "Oh uh... Sweetie what was I doing just now? I feel like I just..."
     show derek:
         xzoom -1
+        yalign 1.0
     derek "Wait ROBOTS? THE WAR’S NEVER OVER! AARRGH!!"
 
     hide derek with moveoutright
@@ -293,6 +294,7 @@ label findKey:
 
             show kvin:
                 xzoom -1
+                yalign 1.0
             hide kvin with moveoutright
 
             lin "Wha- Come back with this you -! … Oh well, it’s his family’s problem now. And now he’s gone at last! I’m not going to complain on that!"
@@ -359,6 +361,7 @@ label parade:
 
     show derek scared at left with moveinleft:
         xzoom-1
+        yalign 1.0
     derek "Hm? What’s that noise approaching us?"
 
 
@@ -412,6 +415,7 @@ label parade:
 
     show lin surprised at left with moveinleft:
         xzoom -1
+        yalign 1.0
     lin " Wait what? No, my cameras aren’t set up for that yet! Too fast! Could you start over please?"
     hide lin with moveoutleft
 
@@ -428,6 +432,7 @@ label parade:
 
     show hans angry at left with moveinleft:
         xzoom -1
+        yalign 1.0
     hans  "Ok…I’ll admit they look cool…they’re slowly invading the place and blocking the exit, but they do look cool…just stay calm and rush to the exit if anything were to happen… "
     hans "Let’s move slowly to the back, where I won't actually be safer, but will at least feel like I am."
     hide hans with moveoutleft
@@ -500,6 +505,7 @@ label bar:
 
     show kvin normal at left with moveinleft:
         xzoom -1
+        yalign 1.0
     kvin "Wooohoo! Look, they’ve got a confetti bag under their cape!"
     show sharon normal with moveinright:
         xalign 0.5
@@ -572,7 +578,7 @@ label bar:
 
     kvin "Waahaa! How did they stuff so much…stuff on these robots! Look grandma, they can do anything!"
 
-    show kvin happy:
+    show kvin happy behind nr_cara_guggen:
         xalign 0.5
     with move
     hide kvin
@@ -586,6 +592,7 @@ label bar:
 
     show derek normal at left with moveinleft:
         xzoom -1
+        yalign 1.0
 
     derek "The…the robot got him and…his legs…we couldn’t find his legs!!"
     sharon "Oh gosh, he seems pretty deep in his delirium this time."
@@ -648,9 +655,11 @@ label bug:
 
     hide nr_cara_guggen_crazy with moveoutbottom
 
-    show hans angry
+    hide hans
+    show hans angry with moveinright
     hans "hey…they’ve stopped working. All the robots are down."
     hans "Something’s coming for me. I know it…"
+    hide hans with moveoutright
 
     show animation_alerte:
             #scene in animation:
@@ -660,7 +669,6 @@ label bug:
     show kvin scared at left with moveinleft
     kvin "uuh… I didn’t touch anything tho?"
 
-    hide Hans
 
     show sharon angry at right with moveinright
 
@@ -669,6 +677,7 @@ label bug:
     hide hans
 
 
+<<<<<<< HEAD
 
     kvin " No but for real this time "
     show servicerobot_karen normal at center with moveinbottom
@@ -677,6 +686,11 @@ label bug:
     show hans curious at left with moveinleft:
         xzoom -1
         yalign 1.0
+=======
+    kvin " No but for real this time, - hey look he’s getting up! See? Nothing bad happened!"
+    hide kvin with moveoutleft
+    show hans curious at left with moveinleft
+>>>>>>> 2b17eca2c1aa1ae6f17e792d3c7071c41d55c2c7
     hans "one of them did get back up but… are you sure it’s not something bad happening? "
     sharon "He’s right that robot doesn’t look good"
     hide hans with moveoutleft
@@ -692,18 +706,23 @@ label crazybot:
 
     service1 "..."
 
+<<<<<<< HEAD
     #hide derek
     show kvin angry at left with moveinleft:
         xalign 0.4
         zoom 0.8
         xzoom -1
 
+=======
+    hide derek with moveoutleft
+    show kvin scared at left with moveinleft
+>>>>>>> 2b17eca2c1aa1ae6f17e792d3c7071c41d55c2c7
     kvin "uuh.. Hello? Someone in there?"
     service1 "..."
 
-    hide sharon
+    hide sharon with moveoutright
 
-    show neonila angry at right
+    show neonila angry at right with moveinright
     neonila "OMG i can’t reach internet! "
     neonila "Where’s my money going to come from if i can’t stream my day? "
     hide neonila with moveouttop
@@ -728,8 +747,13 @@ label crazybot:
 
     service1 "{b}Removal of the threat in progress{/b}"
 
+<<<<<<< HEAD
 
     show derek scared at left :
+=======
+    hide kvin with moveoutleft
+    show derek scared at left with moveinleft:
+>>>>>>> 2b17eca2c1aa1ae6f17e792d3c7071c41d55c2c7
             xzoom -1
             yalign 1.0
     derek "GET DOWN!"
