@@ -676,9 +676,6 @@ label bug:
 
     hide hans
 
-
-<<<<<<< HEAD
-
     kvin " No but for real this time "
     show servicerobot_karen normal at center with moveinbottom
     kvin " - hey look he’s getting up! See? Nothing bad happened!"
@@ -686,11 +683,6 @@ label bug:
     show hans curious at left with moveinleft:
         xzoom -1
         yalign 1.0
-=======
-    kvin " No but for real this time, - hey look he’s getting up! See? Nothing bad happened!"
-    hide kvin with moveoutleft
-    show hans curious at left with moveinleft
->>>>>>> 2b17eca2c1aa1ae6f17e792d3c7071c41d55c2c7
     hans "one of them did get back up but… are you sure it’s not something bad happening? "
     sharon "He’s right that robot doesn’t look good"
     hide hans with moveoutleft
@@ -706,17 +698,11 @@ label crazybot:
 
     service1 "..."
 
-<<<<<<< HEAD
-    #hide derek
+    hide derek
     show kvin angry at left with moveinleft:
         xalign 0.4
-        zoom 0.8
         xzoom -1
 
-=======
-    hide derek with moveoutleft
-    show kvin scared at left with moveinleft
->>>>>>> 2b17eca2c1aa1ae6f17e792d3c7071c41d55c2c7
     kvin "uuh.. Hello? Someone in there?"
     service1 "..."
 
@@ -747,13 +733,8 @@ label crazybot:
 
     service1 "{b}Removal of the threat in progress{/b}"
 
-<<<<<<< HEAD
-
-    show derek scared at left :
-=======
     hide kvin with moveoutleft
     show derek scared at left with moveinleft:
->>>>>>> 2b17eca2c1aa1ae6f17e792d3c7071c41d55c2c7
             xzoom -1
             yalign 1.0
     derek "GET DOWN!"
