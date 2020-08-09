@@ -610,12 +610,12 @@ label bug:
         yalign 0.5 xalign 0.5 zoom 0.6
 
 
-    show sharon angry at right
+    show sharon angry at right with moveinright
     sharon "....KEVIN!"
-    show kvin scared at left
+    show kvin scared at left with moveinleft
     kvin "Wha-? But I-"
-    hide sharon
-    hide kvin
+    hide sharon with moveoutright
+    hide kvin with moveoutleft
 
     show animation_alerte:
     #scene in animation:
@@ -623,16 +623,16 @@ label bug:
     with vpunch
 
 
-    show lin surprised at right
+    show lin surprised at right with moveinright
     lin "What’s going on? I can’t take picture in these conditions! "
-    show neonila surprised at left
+    show neonila surprised at left with moveinleft
     neonila " He-hey, what’s happening? Chat what’s going on?"
     neonila " …Chat??"
     neonila "Oh god I can’t reach it! "
     neonila "WHATAMIGONNADOICANTDOANYTHINGWITHOUTMYCHAT!"
 
-    hide neonila
-    hide lin
+    hide neonila with moveoutleft
+    hide lin with moveoutright
 
     show animation_alerte:
         #scene in animation:
@@ -657,34 +657,47 @@ label bug:
         zoom 0.5
     with vpunch
 
-    show kvin scared at left
+    show kvin scared at left with moveinleft
     kvin "uuh… I didn’t touch anything tho?"
 
     hide Hans
 
-    show sharon angry at right
+    show sharon angry at right with moveinright
+
     sharon "Sure young imbecile, and i guess those robots just fell down on their own!"
 
+    hide hans
+
+
+
+    kvin " No but for real this time "
     show servicerobot_karen normal at center with moveinbottom
-
-
-    kvin " No but for real this time, - hey look he’s getting up! See? Nothing bad happened!"
-    hide kvin
-    show hans curious at left
+    kvin " - hey look he’s getting up! See? Nothing bad happened!"
+    hide kvin with moveoutleft
+    show hans curious at left with moveinleft:
+        xzoom -1
+        yalign 1.0
     hans "one of them did get back up but… are you sure it’s not something bad happening? "
     sharon "He’s right that robot doesn’t look good"
-    hide hans
-    show derek scared at left :
+    hide hans with moveoutleft
+    show derek scared at left with moveinleft:
         xzoom -1
         yalign 1.0
 
     derek "Here it comes"
     sharon "Stop saying things like these you’ll actually start scaring me!"
 
+#Sc 07-------------------------------------------------------------------------------------------------------------------------------------
+label crazybot:
+
     service1 "..."
 
-    hide derek
-    show kvin scared at left
+    #hide derek
+    show kvin angry at left with moveinleft:
+        xalign 0.4
+        zoom 0.8
+        xzoom -1
+
     kvin "uuh.. Hello? Someone in there?"
     service1 "..."
 
@@ -693,11 +706,20 @@ label bug:
     show neonila angry at right
     neonila "OMG i can’t reach internet! "
     neonila "Where’s my money going to come from if i can’t stream my day? "
+    hide neonila with moveouttop
+    show charles surprised with moveinbottom:
+        xalign 0.85
+        yalign 0.5
+
     neonila "Even my K-9 unit antenna can’t connect!"
     neonila "Hey stupid robot how about you do something about it! "
 
     service1 "..."
 
+    show charles angry
+
+    show servicerobot_karen with move:
+        xalign 0.6
     neonila "h- hey… what are you…?"
 
     service1 "{b}Tentative to communicate to an unknown receptor in a quarantine situation detected{/b}"
@@ -706,57 +728,119 @@ label bug:
 
     service1 "{b}Removal of the threat in progress{/b}"
 
-    hide kvin
+
     show derek scared at left :
             xzoom -1
             yalign 1.0
     derek "GET DOWN!"
+    hide kvin with moveoutbottom
+    hide derek with moveoutbottom
 
-    show servicerobot_karen broken with vpunch:
+    show servicerobot_karen broken :
         zoom 0.5
+    play sound "/audio/crash_dog.mp3"
+    show charles broken with vpunch:
+        xalign 1.0
+        yalign 0.5
 
-    show neonila surprised
+
+    "CRACK"
+    hide charles with moveoutbottom
+
+    show neonila surprised at right with moveintop
+
+    show servicerobot_karen broken with move:
+        xalign 0.6
+
+
     neonila "Haaa!"
 
 
+    show hans angry at left with moveinleft:
+        xzoom -1
+        yalign 1.0
 
+    hans "Get away from him!"
+    hans "He’s become completely crazy!"
+    hide hans with moveoutleft
 
+    show lin surprised at left with moveinleft
+    lin "What’s this bot doing!"
+    lin " Without the old man’s intervention that throw would have killed her!"
 
-    "description du bug"
-    play sound "/audio/crash_dog.mp3"
-    show charles broken with vpunch:
-        yalign 0.7
-        xalign 0.5
-    "crack"
-    hide charles
-
-#Sc 07-------------------------------------------------------------------------------------------------------------------------------------
-label crazybot:
-    play sound "audio/robot_glitch01.mp3"
-
-    show nr_cara_guggen_crazy with moveinbottom:
-        zoom 0.5
-        xalign 0.5
-        easein 5.0 xalign 0.5 zoom 1
-
-    "Sc 07, Carnabots crazy, dog death"
-
-
-    hide nr_cara_guggen_crazy with moveoutbottom
-
-    show servicerobot_karen normal at center with moveinright
-    service1 "are you ok"
-
-    play sound "audio/robot_glitch02.mp3"
-    show servicerobot_karen broken with vpunch:
+    show servicerobot_karen broken with move:
+        xalign 0.7
         zoom 0.5
 
-    service1 "jump on you"
-    show servicerobot_karen:
-        yalign 0.01 xalign 0.5 zoom 1.0
-    pause
+
+    service1 "{b}Another communication threat has been detected. Removal engaged{/b}"
+
+    neonila "Hey let me go!"
+    hide lin  with moveoutleft
+    show derek angry at left with moveinleft:
+        xzoom -1
+        yalign 1.0
+    derek "Why don’t I have my gun right when something like this happens! "
+    show derek angry with move :
+        xalign 0.5
+    show derek angry with move :
+        xalign 0.2
+
+    derek "Take this you damn can!"
+
+    neonila "H-Help! He’s going to kill me!"
+
+    show servicerobot_karen broken with move:
+        xalign 0.8
+        zoom 0.5
+
+    service1 "{b}Removal of the threat in progress"
+    service1 "{b}TING! The virus database has been uptateeeed* bzzp{/b}"with vpunch
+
+    neonila "Wait… what? He let his grip go!"
     hide servicerobot_karen with moveoutbottom
-    pause
+
+    hide derek with moveoutleft
+
+    show kvin happy at left with moveinleft
+    kvin "Hello there! Missed me?"
+
+    hide neonila with moveoutright
+
+    show kvin happy at right with move
+    show derek normal at left with moveinleft:
+            xzoom -1
+            yalign 1.0
+    derek "Uh… no but how did yo-"
+    kvin "The system was so old i just had to open the command pannel on the back and -"
+    derek "Robotic sorcery, understood."
+
+    hide derek with moveoutleft
+    show kvin happy at left with move
+    show neonila normal at right with moveinright
+    neonila "This… THING almost killed me and all you’re talking about is nerd stuff? Are you guys for real?"
+
+    hide kvin with moveoutleft
+    show sharon normal at left with moveinleft:
+        xzoom -1
+        yalign 1.0
+    sharon "Okay everybody CALM DOWN! None of these abomination seems to be coming back up, so it is grand time we take our leave!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 label returnnormal:
