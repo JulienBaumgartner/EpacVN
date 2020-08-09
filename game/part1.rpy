@@ -561,17 +561,18 @@ label bar:
     hans "I…I can’t act recklessly! Now I just hope nothing too bad happens…"
 
     stop music fadeout 1.0
-    hide bar_01 with fade
+    hide bar_01
 #-----------------------------------------------------------------------------------
+    show movie
     play movie "video/confettis01.webm" loop
-    show movie behind derek with fade
     play music "audio/katy_edit_loop.mp3"
-
-    show nr_cara_guggen:
+    show nr_cara_guggen :
         zoom 0.1
         xalign 0.5
         yalign 0.3
         easein 4.0 xalign 0.5 zoom 0.3
+    with fade
+
     pause
 
     show kvin happy at left with moveinleft
@@ -741,8 +742,7 @@ label crazybot:
     hide kvin with moveoutbottom
     hide derek with moveoutbottom
 
-    show servicerobot_karen broken :
-        zoom 0.5
+    show servicerobot_karen broken
     play sound "/audio/crash_dog.mp3"
     show charles broken with vpunch:
         xalign 1.0
@@ -775,7 +775,6 @@ label crazybot:
 
     show servicerobot_karen broken with move:
         xalign 0.7
-        zoom 0.5
 
 
     service1 "{b}Another communication threat has been detected. Removal engaged{/b}"
@@ -797,7 +796,6 @@ label crazybot:
 
     show servicerobot_karen broken with move:
         xalign 0.8
-        zoom 0.5
 
     service1 "{b}Removal of the threat in progress"
     service1 "{b}TING! The virus database has been uptateeeed* bzzp{/b}"with vpunch
