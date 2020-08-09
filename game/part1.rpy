@@ -656,11 +656,7 @@ label bug:
     hide nr_cara_guggen_crazy with moveoutbottom
 
     hide hans
-<<<<<<< HEAD
     show hans angry with moveinright
-=======
-    show hans angry with move
->>>>>>> 9162b384f51f0c79f51c588eefa0d62b4fb9c792
     hans "hey…they’ve stopped working. All the robots are down."
     hans "Something’s coming for me. I know it…"
     hide hans with moveoutright
