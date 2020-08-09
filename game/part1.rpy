@@ -648,6 +648,7 @@ label bug:
 
     hide nr_cara_guggen_crazy with moveoutbottom
 
+    hide hans
     show hans angry
     hans "hey…they’ve stopped working. All the robots are down."
     hans "Something’s coming for me. I know it…"
