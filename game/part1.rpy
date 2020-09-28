@@ -712,7 +712,7 @@ label crazybot:
     show neonila angry at right with moveinright
     neonila "OMG i can’t reach internet! "
     neonila "Where’s my money going to come from if i can’t stream my day? "
-    hide neonila with moveouttop
+    hide neonila with moveoutright
     show charles surprised with moveinbottom:
         xalign 0.85
         yalign 0.5
@@ -752,7 +752,7 @@ label crazybot:
     "CRACK"
     hide charles with moveoutbottom
 
-    show neonila surprised at right with moveintop
+    show neonila surprised at right with moveinright
 
     show servicerobot_karen broken with move:
         xalign 0.6
@@ -805,10 +805,20 @@ label crazybot:
 
     hide derek with moveoutleft
 
-    show kvin happy at left with moveinleft
-    kvin "Hello there! Missed me?"
+
 
     hide neonila with moveoutright
+#--------------------------------------------------------------------------------------------------------------
+label returnnormal:
+    stop music fadeout 1.0
+    play music "/audio/train_roule.mp3"
+
+    scene bg_parade_car with dissolve:
+        zoom 0.5
+    show room-deactivated_onlyrobots
+
+    show kvin happy at left with moveinleft
+    kvin "Hello there! Missed me?"
 
     show kvin happy at right with move
     show derek normal at left with moveinleft:
@@ -829,29 +839,75 @@ label crazybot:
         yalign 1.0
     sharon "Okay everybody CALM DOWN! None of these abomination seems to be coming back up, so it is grand time we take our leave!"
 
+    hide neonila with moveoutright
+
+    show lin surprised  at right with moveinright
+    lin "She’s right, we have to move! I’m not staying a second more with those damn robots in the wagon!"
 
 
 
+    show derek normal at left with moveinleft:
+        xalign 0.3
+        yalign 1.0
+        xzoom -1
+    derek "I doubt we can go back the way we came in. Let’s get to the other end of the wagon."
 
 
 
+    show neonila normal with moveinright:
+        xalign 0.7
+        yalign 1.0
+    neonila "Why not? Can’t we just get out by the entrance?"
 
+    show hans normal with moveinleft:
+        xalign 0.03
+        yalign 1.0
+        xzoom -1
 
+    hans "No, the door clearly looked reinforced, we won’t be able to get out this way."
 
-
-
-
-
-
-
-
-
-label returnnormal:
-    stop music fadeout 1.0
-    play music "/audio/train_roule.mp3"
-
+#----FIX ZOOM ANIMATION using an other image!!!!
     scene bg_parade_car with dissolve:
-        zoom 0.5
+        zoom 1
+        xalign 0.6
+        yalign 0.3
+
+    hans "There also was another door on the other side of the entrance, but it looked like an {i}employee-only{/i} kind of room, and we don’t have the password needed to get in."
+    neonila "You guys really noticed all that just by coming in the train? Guess being paranoid has its upside… sometimes."
+
+    show kvin happy at center with moveinright
+    kvin "Yeaaah let’s explore!! Me first me first! There’s a door this way!"
+
+
+
+
+
+    lin "Hey kid don’t rush like that! Damn we’re in a train full of dangerous bots, and there’s no way the door’s just going to open after what happen"
+    kvin "Hey look the door’s open! Adventuuuure!"
+
+    lin "I must be getting old…"
+    derek "Now get a move on soldiers, we don’t know when those damn tin cans will come back to life! Go go go!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     show room-deactivated_onlyrobots
 
